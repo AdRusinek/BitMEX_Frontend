@@ -1,0 +1,300 @@
+img {
+  width: 100%;
+}
+
+body {
+  background-image: url("https://wallpaperaccess.com/full/307252.jpg");
+  background-size: 100%;
+}
+
+#mainDashboardContainer {
+  background-color: black;
+  border: blue 1px solid;
+  padding-bottom: 3%;
+  margin-bottom: 40px;
+}
+
+#managementTool {
+  color: white;
+}
+
+#managementTool:hover {
+  color: rgba(255, 255, 255, 0.534);
+}
+
+#dashboard {
+  color: white;
+}
+
+#dashboard:hover {
+  color: rgba(255, 255, 255, 0.534);
+}
+
+#positions {
+  background-color: black;
+  color: white;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#positions th {
+  text-align: center;
+  border: rgb(9, 255, 0) 1px groove;
+  border-top: rgb(9, 255, 0) 1px groove;
+}
+
+#positions td {
+  text-align: center;
+  border: rgb(9, 255, 0) 1px groove;
+}
+
+#positions tr:hover {
+  background-color: rgb(32, 30, 30);
+}
+
+#order {
+  color: white;
+  background-color: black;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#order th {
+  text-align: center;
+  border: rgb(0, 162, 255) 1px groove;
+  border-top: rgb(0, 162, 255) 1px groove;
+}
+
+#order td {
+  text-align: center;
+  border: rgb(0, 162, 255) 1px groove;
+}
+
+#order tr:hover {
+  background-color: rgb(32, 30, 30);
+}
+
+#ordersHeader {
+  font-size: x-large;
+  color: rgb(0, 162, 255);
+}
+
+#stop {
+  background-color: black;
+  color: white;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#stop th {
+  text-align: center;
+  border: rgb(255, 0, 0) 1px groove;
+  border-top: rgb(255, 0, 0) 1px groove;
+}
+
+#stop td {
+  text-align: center;
+  border: rgb(255, 0, 0) 1px groove;
+}
+
+#waitingTrailingStopHeader {
+  font-size: x-large;
+  color: goldenrod;
+}
+
+#waitingTrailingStop {
+  background-color: black;
+  color: white;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#waitingTrailingStop td {
+  text-align: center;
+  border: rgb(255, 183, 0) 1px groove;
+}
+
+#waitingTrailingStop tr:hover {
+  background-color: rgb(32, 30, 30);
+}
+
+#waitingTrailingStop th {
+  text-align: center;
+  border: rgb(255, 183, 0) 1px groove;
+  border-top: rgb(255, 183, 0) 1px groove;
+}
+
+#trailingStop {
+  border: rgb(255, 183, 0) 1px groove;
+  border-top: rgb(255, 183, 0) 1px groove;
+}
+
+#trailingStopText {
+  color: rgb(255, 183, 0);
+}
+
+#trailingStopText:hover {
+  color: rgb(255, 102, 0);
+}
+
+#trailingStopSubmit {
+  background-color: black;
+  color: rgb(255, 183, 0);
+  border: rgb(255, 183, 0) 1px groove;
+}
+
+#stop tr:hover {
+  background-color: rgb(32, 30, 30);
+}
+
+#stopHeader {
+  font-size: x-large;
+  color: red;
+}
+
+#positionHeader {
+  font-size: x-large;
+  color: rgb(9, 255, 0);
+}
+
+#mainNavbar {
+  background-color: black;
+  border-bottom: blue 1px solid;
+}
+
+#inputs input {
+  background-color: black;
+  border-radius: 0%;
+  color: white;
+  border: blue 1px groove;
+}
+
+#textColorRegister {
+  border: blue 1px groove;
+  background-color: black;
+  padding-top: 5%;
+  padding-bottom: 7%;
+  padding-right: 17%;
+  padding-left: 17%;
+  color: white;
+}
+
+#textColorRegister p {
+  font-size: 35px;
+  color: white;
+}
+
+#textColorLogin {
+  border: blue 1px groove;
+  background-color: black;
+  padding-top: 5%;
+  padding-bottom: 9%;
+  padding-right: 17%;
+  padding-left: 17%;
+  color: white;
+}
+
+#authorizationSubmitButton:hover {
+  background-color: rgb(12, 11, 11);
+}
+
+#textColorLogin p {
+  font-size: 35px;
+  color: white;
+}
+
+#trailingStopDivs {
+  border: goldenrod 1px groove;
+  background-color: black;
+  padding-top: 5%;
+  padding-bottom: 7%;
+  padding-right: 17%;
+  padding-left: 17%;
+  color: white;
+}
+
+#trailingStopTextSet {
+  color: goldenrod;
+  font-size: 30px;
+}
+
+#trailingStopSet {
+  background-color: black;
+  border-radius: 0%;
+  color: goldenrod;
+  border: goldenrod 1px groove;
+}
+
+#trailingStopSetSubmit {
+  border: goldenrod 1px groove;
+  border-radius: 0px;
+  color: white;
+  background-color: black;
+}
+
+#trailingStopSetSubmit:hover {
+  background-color: rgb(12, 11, 11);
+}
+
+#landing {
+  color: white;
+}
+
+#landingButton {
+  background-color: black;
+  border-radius: 0%;
+  color: white;
+  border: blue 1px groove;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+.fa.fa-edit {
+  color: #18a2b9;
+}
+
+.list-group-item.delete:hover {
+  cursor: -webkit-grab;
+  background-color: pink;
+}
+
+.list-group-item.update:hover {
+  cursor: -webkit-grab;
+  background-color: gainsboro;
+}
+
+.list-group-item.board:hover {
+  cursor: -webkit-grab;
+  background-color: gainsboro;
+}
+
+.fa.fa-minus-circle {
+  color: red;
+}
+
+.landing-inner {
+  padding-top: 80px;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-form {
+  opacity: 0.9;
+}
+
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
+}
