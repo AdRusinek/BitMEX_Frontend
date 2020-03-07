@@ -28,7 +28,7 @@ class Header extends Component {
                             className="nav-link"
                             to="/trailing"
                         >
-                            Set Trailing Stop
+                            Trailing Stop
                         </Link>
                     </li>
                 </ul>
