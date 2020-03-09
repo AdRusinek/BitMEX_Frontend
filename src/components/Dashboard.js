@@ -16,9 +16,10 @@ import WaitingTrailingStop from "./waitingTrailingStop/WaitingTrailingStop";
 
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.getPositions();
-    this.props.getOrdersLimit();
-    this.props.getStops();
+    const {id} = this.props.match.params;
+    this.props.getPositions(id);
+    this.props.getOrdersLimit(id);
+    this.props.getStops(id);
     this.props.getWaitingTrailingStops();
   }
 

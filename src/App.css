@@ -194,6 +194,13 @@ body {
   color: white;
 }
 
+#credentialsElements {
+  width: 100%;
+  border: blue 1px groove;
+  background-color: black;
+  color: white;
+}
+
 #authorizationSubmitButton:hover {
   background-color: rgb(12, 11, 11);
 }

@@ -15,6 +15,8 @@ import setJWTToken from "./securityUtils/setJWTToken";
 import {SET_CURRENT_USER} from "./actions/types";
 import {logout} from "./actions/securityActions";
 import SecuredRoute from "./securityUtils/SecureRoute";
+import Credentials from "./components/credentials/CredentialsDashboard";
+import AddCredentials from "./components/credentials/AddCredentials";
 
 const jwtToken = localStorage.jwtToken;
 
@@ -50,9 +52,11 @@ class App extends Component {
                             // Private routs
                         }
                         <Switch>
+                            <SecuredRoute exact path="/credentials" component={Credentials}/>
+                            <SecuredRoute exact path="/addCredentials" component={AddCredentials}/>
                             <SecuredRoute exact path="/trailing" component={Trailing}/>
-                            <SecuredRoute exact path="/dashboard" component={Dashboard}/>
-                        </Switch>/
+                            <SecuredRoute exact path="/dashboard/:id" component={Dashboard}/>
+                        </Switch>
                     </div>
                 </Router>
             </Provider>

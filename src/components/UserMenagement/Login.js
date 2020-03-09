@@ -18,13 +18,13 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.security.validToken) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/credentials");
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.security.validToken) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/credentials");
     }
 
     if (nextProps.errors) {
@@ -60,7 +60,7 @@ class Login extends Component {
                 <form
                   onSubmit={this.onSubmit}
                   id="inputs"
-                  action="dashboard.html"
+                  action="credentials.html"
                 >
                   <div className="form-group">
                     <input

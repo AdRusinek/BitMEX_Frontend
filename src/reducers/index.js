@@ -5,6 +5,7 @@ import positionReducer from "./positionReducer";
 import stopReducer from "./stopReducer";
 import waitingTrailingStopReducer from "./waitingTrailingStopReducer";
 import securityReducer from "./securityReducer";
+import credentialsReducer from "./credentialsReducer";
 
 export default combineReducers({
   errors: errorReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
   stop: stopReducer,
   position: positionReducer,
   waitingTrailingStop: waitingTrailingStopReducer,
-  security: securityReducer
+  security: securityReducer,
+  credential: credentialsReducer
 });
