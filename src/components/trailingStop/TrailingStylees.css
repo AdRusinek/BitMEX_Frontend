@@ -1,0 +1,13 @@
+#ButtonTrailingStop {
+    text-align: center;
+    background-color: black;
+    border: goldenrod 1px groove;
+}
+
+#ButtonTrailingStopText{
+    color: white;
+}
+
+#ButtonTrailingStop:hover {
+    background-color: rgb(32, 30, 30);
+}

@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
-import {createCredentials} from "../../actions/credentialActions";
-import {css} from "../credentials/CredentialsStyles.css";
+import {createCredentials} from "../../actions/accountActions";
+import {css} from "./AccountStyles.css";
 
-class AddCredentials extends Component {
+class AddAccount extends Component {
     constructor() {
         super();
 
@@ -116,7 +116,7 @@ class AddCredentials extends Component {
     }
 }
 
-AddCredentials.propTypes = {
+AddAccount.propTypes = {
     createCredentials: PropTypes.func.isRequired,
     errors: PropTypes.object.isRequired
 };
@@ -125,4 +125,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps,{createCredentials})(AddCredentials);
+export default connect(mapStateToProps,{createCredentials})(AddAccount);

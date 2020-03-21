@@ -24,7 +24,7 @@ class Trailing extends Component {
       this.setState({ errors: nextProps.errors });
     }
   }
-
+  
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -36,7 +36,8 @@ class Trailing extends Component {
       quantity: this.state.quantity,
       trialValue: this.state.trialValue
     };
-    this.props.createTrailing(newTrailing, this.props.history);
+    const {id} = this.props.match.params;
+    this.props.createTrailing(newTrailing, this.props.history, id);
   }
 
   render() {
@@ -56,7 +57,7 @@ class Trailing extends Component {
                 <div className="form-group">
                   <input
                     id="trailingStopSet"
-                    type="number"
+                    type="text"
                     className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.startingPrice
                     })}

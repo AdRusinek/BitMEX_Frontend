@@ -16,26 +16,9 @@ class Header extends Component {
 
         const userIsAuthenticated = (
             <div className="collapse navbar-collapse" id="mobile-nav">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <Link id="dashboard" className="nav-link" to="/dashboard">
-                            Dashboard
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link
-                            id="trailingStopText"
-                            className="nav-link"
-                            to="/trailing"
-                        >
-                            Trailing Stop
-                        </Link>
-                    </li>
-                </ul>
-
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/dashboard">
+                        <Link className="nav-link" to="/credentials">
                             <i className="fas fa-user-circle mr-1"/> {user.fullName}
                         </Link>
                     </li>
@@ -50,6 +33,7 @@ class Header extends Component {
 
         const userIsNotAuthenticated = (
             <div>
+
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         <Link className="nav-link" to="/register">
@@ -77,17 +61,9 @@ class Header extends Component {
             <div>
                 <nav id="mainNavbar" className="navbar navbar-expand-sm">
                     <div className="container">
-                        <Link id="managementTool" className="navbar-brand" to="/">
+                        <h3 id="managementTool" className="navbar-brand" >
                             BitMEX Management Tool
-                        </Link>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#mobile-nav"
-                        >
-                            <span className="navbar-toggler-icon"/>
-                        </button>
+                        </h3>
                         {headerLinks}
                     </div>
                 </nav>

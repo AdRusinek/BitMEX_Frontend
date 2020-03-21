@@ -80,12 +80,17 @@ class Login extends Component {
                   <div className="form-group">
                     <input
                       type="password"
-                      className="form-control form-control-lg"
+                      className={classnames("form-control form-control-lg", {
+                        "is-invalid": errors.password
+                      })}
                       placeholder="Password"
                       name="password"
                       value={this.state.password}
                       onChange={this.onChange}
                     />
+                    {errors.password && (
+                        <div className="invalid-feedback">{errors.password}</div>
+                    )}
                   </div>
                   <input
                     id="authorizationSubmitButton"
