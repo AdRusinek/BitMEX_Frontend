@@ -34,35 +34,35 @@ class Dashboard extends Component {
 
         return (
             <div>
-                <br/>
-                <div className="orders">
+                <div>
                     <div id="mainDashboardContainer" className="container">
                         <br/>
-                        <div className="row">
-                            <div className="col-md-12">
-                                <hr/>
-                                <WaitingTrailingStopHeadTable/>
-                                {waitingTrailingStops.map(waitingTrailingStop => (
-                                    <WaitingTrailingStop
-                                        key={waitingTrailingStop.id}
-                                        waitingTrailingStop={waitingTrailingStop}
-                                    />
-                                ))}
-                                <StopHeadTable/>
-                                {stops.map(stop => (
-                                    <Stop key={stop.orderID} stop={stop}/>
-                                ))}
-                                <PositionHeadTable/>
-                                {positions.map(position => (
-                                    <Position
-                                        key={position.openingTimestamp}
-                                        position={position}
-                                    />
-                                ))}
-                                <OrderHeadTable/>
-                                {orders.map(order => (
-                                    <Order key={order.orderID} order={order}/>
-                                ))}
+                        <div className="col-md-12">
+                            <div className="row">
+                                <div id="mainDashboardContainerElements" className="col-md-10">
+                                    <WaitingTrailingStopHeadTable/>
+                                    {waitingTrailingStops.map(waitingTrailingStop => (
+                                        <WaitingTrailingStop
+                                            key={waitingTrailingStop.id}
+                                            waitingTrailingStop={waitingTrailingStop}
+                                        />
+                                    ))}
+                                    <StopHeadTable/>
+                                    {stops.map(stop => (
+                                        <Stop key={stop.orderID} stop={stop}/>
+                                    ))}
+                                    <PositionHeadTable/>
+                                    {positions.map(position => (
+                                        <Position
+                                            key={position.openingTimestamp}
+                                            position={position}
+                                        />
+                                    ))}
+                                    <OrderHeadTable/>
+                                    {orders.map(order => (
+                                        <Order key={order.orderID} order={order}/>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

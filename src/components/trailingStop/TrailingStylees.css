@@ -1,7 +1,7 @@
 #ButtonTrailingStop {
     text-align: center;
-    background-color: black;
-    border: goldenrod 1px groove;
+    background-color: rgba(0, 0, 0, 0.85);
+    /*border: rgb(99, 78, 255) 1px groove;*/
 }
 
 #ButtonTrailingStopText{

@@ -54,6 +54,7 @@ class App extends Component {
                         }
                         <Switch>
                             <SecuredRoute exact path="/credentials" component={Credentials}/>
+                            <SecuredRoute exact path="/credentials/:id" component={Credentials}/>
                             <SecuredRoute exact path="/addCredentials" component={AddCredentials}/>
                             <SecuredRoute exact path="/addAlert" component={AddAlert}/>
                             <SecuredRoute exact path="/trailing/:id" component={Trailing}/>

@@ -3,7 +3,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {setAlert} from "../../actions/alertActions";
-// import {css} from "./AlertStylees.css";
+import {css} from "../credentials/AccountStyles.css";
 
 class AddAlert extends Component {
     constructor() {
@@ -42,9 +42,7 @@ class AddAlert extends Component {
     render() {
         const {errors} = this.state;
         return (
-            <div>
-                <br/>
-                <br/>
+            <div id="addAlertMainDiv">
                 <div className="container">
                     <div className="row">
                         <div id="alertDivs" className="col-md-8 m-auto">

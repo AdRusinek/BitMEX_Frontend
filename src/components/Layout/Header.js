@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {logout} from "../../actions/securityActions";
+import {css} from "./Layout.css";
+
 
 class Header extends Component {
 
@@ -18,12 +20,12 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="mobile-nav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/credentials">
+                        <Link id="headerText"  className="nav-link" to="/credentials">
                             <i className="fas fa-user-circle mr-1"/> {user.fullName}
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/logout" onClick={this.logout.bind(this)}>
+                        <Link id="headerText"  className="nav-link" to="/logout" onClick={this.logout.bind(this)}>
                             Logout
                         </Link>
                     </li>
@@ -36,12 +38,12 @@ class Header extends Component {
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/register">
+                        <Link id="landingActions" className="nav-link" to="/register">
                             Sign Up
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/login">
+                        <Link id="landingActions" className="nav-link" to="/login">
                             Login
                         </Link>
                     </li>

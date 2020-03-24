@@ -7,7 +7,6 @@ class Account extends Component {
             <div>
                 <div className="container">
                     <div id="credentialsElements" className="col-md-12 m-auto">
-                        <br/>
                         <td>{credential.credentialsName}</td>
                     </div>
                 </div>

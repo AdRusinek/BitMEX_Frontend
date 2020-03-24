@@ -42,9 +42,7 @@ class AddAccount extends Component {
     render() {
         const {errors} = this.state;
         return (
-            <div>
-                <br/>
-                <br/>
+            <div id="mainAccountDiv">
                 <div className="container">
                     <div className="row">
                         <div id="credentialDivs" className="col-md-8 m-auto">

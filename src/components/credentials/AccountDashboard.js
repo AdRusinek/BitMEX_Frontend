@@ -19,45 +19,27 @@ class AccountDashboard extends Component {
         const {customAlerts} = this.props.customAlert;
         const {credentials} = this.props.credential;
         return (
-            <div id="mainDivAccount" className="register" >
-                <br/>
-                <br/>
-                <div id="accountDiv" className="">
-                    <div className="">
-                        <div id="mainCredentialsContainer" className="col-md-10">
-                            <div className="form-group">
-                                <br/>
-                                <CreateAccountButton/>
-                                <br/>
-                                {credentials.map(credential => (
-                                    <Link className="nav-link" to={`/dashboard/${credential.id}`}>
-                                        <Account
-                                            key={credential.id}
-                                            credential={credential}
-                                        />
-                                        <br/>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
+            <div className="container mainAccountDashboard">
+                <div className="row">
+                    <div id="accounts" className="col-sm-6 col-md-5 offset-md-1">
+                        <CreateAccountButton/>
+                        {credentials.map(credential => (
+                            <Link className="nav-link" to={`/dashboard/${credential.id}`}>
+                                <Account
+                                    key={credential.id}
+                                    credential={credential}
+                                />
+                            </Link>
+                        ))}
                     </div>
-                </div>
-                <div id="alertDiv" className="">
-                    <div className="">
-                        <div id="mainAlertsContainer" className="col-md-10">
-                            <div className="form-group">
-                                <br/>
-                                <SetAlertButton/>
-                                <br/>
-                                {customAlerts.map(customAlert => (
-                                    <Alert
-                                        key={customAlert.id}
-                                        customAlert={customAlert}
-                                    />
-                                ))}
-
-                            </div>
-                        </div>
+                    <div id="alerts" className="col-sm-6 col-md-5">
+                        <SetAlertButton/>
+                        {customAlerts.map(customAlert => (
+                            <Alert
+                                key={customAlert.id}
+                                customAlert={customAlert}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

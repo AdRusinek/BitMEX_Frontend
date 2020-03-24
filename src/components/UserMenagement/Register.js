@@ -3,6 +3,7 @@ import { createNewUser } from "../../actions/securityActions";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
+import {css} from "./UserManagement.css";
 
 class Register extends Component {
   constructor() {
