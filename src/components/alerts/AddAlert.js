@@ -12,6 +12,7 @@ class AddAlert extends Component {
         this.state = {
             alertMessage: "",
             alertTriggeringPrice: "",
+            direction: "above",
             errors: {}
         };
         this.onChange = this.onChange.bind(this);
@@ -25,7 +26,11 @@ class AddAlert extends Component {
     }
 
     onChange(e) {
-        this.setState({[e.target.name]: e.target.value});
+        const {name, value, type, checked} = e.target;
+        type === "checkbox" ? this.setState({[name]: checked}) :
+            this.setState({
+                [name]: value
+            })
     }
 
     onSubmit(e) {
@@ -33,9 +38,10 @@ class AddAlert extends Component {
 
         const newAlert = {
             alertMessage: this.state.alertMessage,
-            alertTriggeringPrice: this.state.alertTriggeringPrice
+            alertTriggeringPrice: this.state.alertTriggeringPrice,
+            direction: this.state.direction
         };
-        // console.log(newAlert);
+        console.log(newAlert);
         this.props.setAlert(newAlert, this.props.history);
     }
 
@@ -50,6 +56,18 @@ class AddAlert extends Component {
                                 BitMEX Alerts
                             </p>
                             <form onSubmit={this.onSubmit}>
+                                <div>
+                                    <label id="directionLabelText">Price goes: </label>
+                                    <select
+                                        id="selectDirection"
+                                        value={this.state.direction}
+                                        onChange={this.onChange}
+                                        name="direction"
+                                    >
+                                        <option value="above">Above</option>
+                                        <option value="below">Below</option>
+                                    </select>
+                                </div>
                                 <div className="form-group">
                                     <input
                                         id="alertSet"

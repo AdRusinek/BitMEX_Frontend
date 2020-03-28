@@ -7,6 +7,11 @@
     color: white;
 }
 
+#accountVerifyText{
+    color: red;
+    font-size: 30px;
+}
+
 #textColorRegister p {
     font-size: 35px;
     color: white;
@@ -15,9 +20,12 @@
 #authorizationSubmitButton:hover {
     background-color: rgb(12, 11, 11);
 }
+#inputs{
+    /*background-color: rgb(12, 11, 11);*/
+}
 
 #inputs input {
-    background-color: black;
+    background-color: rgba(12, 11, 11, 0.0);
     border-radius: 10px;
     color: white;
     border: white 1px groove;

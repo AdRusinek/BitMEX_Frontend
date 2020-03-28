@@ -1,121 +1,134 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import classnames from "classnames";
-import { login } from "../../actions/securityActions";
+import {login} from "../../actions/securityActions";
+import {css} from "./UserManagement.css";
 
 class Login extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "",
-      password: "",
-      errors: {}
-    };
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  componentDidMount() {
-    if (this.props.security.validToken) {
-      this.props.history.push("/credentials");
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.security.validToken) {
-      this.props.history.push("/credentials");
+    constructor() {
+        super();
+        this.state = {
+            username: "",
+            password: "",
+            errors: {}
+        };
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
-    if (nextProps.errors) {
-      this.setState({ errors: nextProps.errors });
+    componentDidMount() {
+        if (this.props.security.validToken) {
+            this.props.history.push("/credentials");
+        }
     }
-  }
 
-  onSubmit(e) {
-    e.preventDefault();
-    const LoginRequest = {
-      username: this.state.username,
-      password: this.state.password
-    };
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.security.validToken) {
+            this.props.history.push("/credentials");
+        }
 
-    this.props.login(LoginRequest);
-  }
+        if (nextProps.errors) {
+            this.setState({errors: nextProps.errors});
+        }
+    }
 
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
+    onSubmit(e) {
+        e.preventDefault();
+        const LoginRequest = {
+            username: this.state.username,
+            password: this.state.password
+        };
 
-  render() {
-    const { errors } = this.state;
-    return (
-      <div>
-        <br />
-        <br />
-        <div className="login">
-          <div className="container">
-            <div className="row">
-              <div id="textColorLogin" className="col-md-8 m-auto">
-                <p className="text-center">Log In</p>
-                <form
-                  onSubmit={this.onSubmit}
-                  id="inputs"
-                  action="credentials.html"
-                >
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.username
-                      })}
-                      placeholder="Email Address"
-                      name="username"
-                      value={this.state.username}
-                      onChange={this.onChange}
-                    />
-                    {errors.username && (
-                      <div className="invalid-feedback">{errors.username}</div>
-                    )}
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="password"
-                      className={classnames("form-control form-control-lg", {
-                        "is-invalid": errors.password
-                      })}
-                      placeholder="Password"
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.onChange}
-                    />
-                    {errors.password && (
-                        <div className="invalid-feedback">{errors.password}</div>
-                    )}
-                  </div>
-                  <input
-                    id="authorizationSubmitButton"
-                    type="submit"
-                    className="btn btn-info btn-block mt-4"
-                  />
-                </form>
-              </div>
+        this.props.login(LoginRequest);
+    }
+
+    onChange(e) {
+        this.setState({[e.target.name]: e.target.value});
+    }
+
+    render() {
+        const {errors} = this.state;
+        let message;
+        if (this.props.location.state == null) {
+            message = "";
+        } else {
+            message = this.props.location.state.detail;
+        }
+        const pStyle = {
+            fontSize: '20px',
+            textAlign: 'center',
+            color: 'red'
+        };
+        return (
+            <div>
+                <br/>
+                <br/>
+                <div className="login">
+                    <div className="container">
+                        <div className="row">
+                            <div id="textColorLogin" className="col-md-8 m-auto">
+                                <p style={pStyle}>{message === null ? "" : message}</p>
+                                <p className="text-center">Log In</p>
+                                <form
+                                    onSubmit={this.onSubmit}
+                                    id="inputs"
+                                    action="credentials.html"
+                                >
+                                    <div className="form-group">
+                                        <input
+                                            type="text"
+                                            className={classnames("form-control form-control-lg", {
+                                                "is-invalid": errors.username
+                                            })}
+                                            placeholder="Email Address"
+                                            name="username"
+                                            value={this.state.username}
+                                            onChange={this.onChange}
+                                        />
+                                        {errors.username && (
+                                            <div className="invalid-feedback">{errors.username}</div>
+                                        )}
+                                    </div>
+                                    <div className="form-group">
+                                        <input
+                                            type="password"
+                                            className={classnames("form-control form-control-lg", {
+                                                "is-invalid": errors.password
+                                            })}
+                                            placeholder="Password"
+                                            name="password"
+                                            value={this.state.password}
+                                            onChange={this.onChange}
+                                        />
+                                        {errors.password && (
+                                            <div className="invalid-feedback">{errors.password}</div>
+                                        )}
+                                    </div>
+                                    <input
+                                        id="authorizationSubmitButton"
+                                        type="submit"
+                                        className="btn btn-info btn-block mt-4"
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 Login.propTypes = {
-  login: PropTypes.func.isRequired,
-  errors: PropTypes.object.isRequired,
-  security: PropTypes.object.isRequired
+    login: PropTypes.func.isRequired,
+    errors: PropTypes.object.isRequired,
+    security: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  security: state.security,
-  errors: state.errors
+    security: state.security,
+    errors: state.errors
 });
 
-export default connect(mapStateToProps, { login })(Login);
+export default connect(mapStateToProps, {login})(Login);
