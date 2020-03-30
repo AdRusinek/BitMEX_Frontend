@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
 import {css} from "./Files.css";
-import {Link} from "react-router-dom";
+import TutorialTable from "./TutorialTable";
 
-class FilesDashboard extends Component {
+class BitmexStepByStep extends Component {
     render() {
         return (
             <div>
-                <ol>
-                    <li>
-                        <Link  to={`/leverage`} > Leverage co i jak</Link>
-                    </li>
-                </ol>
+                <TutorialTable/>
                 <div >
                     <br/>
                     <div id="box-content">
@@ -22,7 +18,8 @@ class FilesDashboard extends Component {
                             pozycji. Pozycja zostaje zlikwidowana dopiero gdy na pozycji tracisz r&oacute;wnowartość
                             portfela.</p>
                         <ul>
-                            <li>Otwieranie pozycji. Czym się r&oacute;żni long od short</li>
+                            <br/>
+                            <p>Otwieranie pozycji. Czym się r&oacute;żni long od short</p>
                             <img id="imagesId" src={require('./guidesImages/krokPoKroku2.jpg')}/>
                         </ul>
                         <p>Zazwyczaj odradzam korzystania z opcji MARKET BUY/SELL ponieważ nigdy nie trafisz w idealny
@@ -34,7 +31,8 @@ class FilesDashboard extends Component {
                             sprzedajesz 100 gruszek za 100 zł, teraz czekasz aż za te 100 zł odkupisz np 120 gruszek.
                             :)</p>
                         <ul>
-                            <li>Wskaźnik Leverage</li>
+                            <br/>
+                            <p>Wskaźnik Leverage</p>
                             <img id="imagesId" src={require('./guidesImages/krokPoKroku3.jpg')}/>
                         </ul>
                         <p>SKŁADANIE ZLECEŃ</p>
@@ -79,4 +77,4 @@ class FilesDashboard extends Component {
 
 }
 
-export default FilesDashboard;
+export default BitmexStepByStep;

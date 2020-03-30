@@ -18,8 +18,10 @@ import SecuredRoute from "./securityUtils/SecureRoute";
 import Credentials from "./components/credentials/AccountDashboard";
 import AddCredentials from "./components/credentials/AddAccount";
 import AddAlert from "./components/alerts/AddAlert";
-import FilesDashboard from "./components/files/FilesDashboard";
-import TestFIle from "./components/files/TestFIle";
+import LeverageGuide from "./components/files/LeverageGuide";
+import StopMarket from "./components/files/StopMarket";
+import TutorialTable from "./components/files/TutorialTable";
+import BitmexStepByStep from "./components/files/BitmexStepByStep";
 
 const jwtToken = localStorage.jwtToken;
 
@@ -57,8 +59,10 @@ class App extends Component {
                         <Switch>
                             <SecuredRoute exact path="/credentials" component={Credentials}/>
                             <SecuredRoute exact path="/credentials/:id" component={Credentials}/>
-                            <SecuredRoute exact path="/showFiles" component={FilesDashboard}/>
-                            <SecuredRoute exact path="/leverage" component={TestFIle}/>
+                            <SecuredRoute exact path="/tutorialTable" component={TutorialTable}/>
+                            <SecuredRoute exact path="/bitmexStepByStep" component={BitmexStepByStep}/>
+                            <SecuredRoute exact path="/leverage" component={LeverageGuide}/>
+                            <SecuredRoute exact path="/stopMarket" component={StopMarket}/>
                             <SecuredRoute exact path="/addCredentials" component={AddCredentials}/>
                             <SecuredRoute exact path="/addAlert" component={AddAlert}/>
                             <SecuredRoute exact path="/trailing/:id" component={Trailing}/>

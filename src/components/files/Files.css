@@ -6,16 +6,56 @@
     height: 55%;
 }
 
+#leverageAndSMImagesId{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 45%;
+}
+
 
 #box-content{
     overflow: auto;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     font-size: 17px;
-    border: rgb(0, 0, 0) 2px groove;
-    background-color: rgba(255, 255, 255, 0.85);
-    height: 700px;
+    border: rgb(49, 220, 252) 2px groove;
+    background-color: rgba(0, 0, 0, 0.84);
+    height: 35vw;
     overflow-y: scroll;
+    border-radius: 30px;
+
+}
+
+#box-content p {
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    width: 600px; /* change to your preferences */
     text-align: center;
+}
+
+#tutorialTable {
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.83);
+    border: rgb(49, 220, 252) 2px groove;
+}
+
+#tutorialTable td:hover {
+    background-color: rgba(16, 15, 14, 0.74);
+}
+
+#tutorialTable td {
+
+    text-align: center;
+    border:rgb(49, 220, 252) 2px groove;
+}
+
+#tutorialTable p {
+    color: white;
+    font-size: 20px;
 }
