@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import SetAlertButton from "../alerts/SetAlertButton";
 import Alert from "../alerts/Alert";
 import {getAlerts} from "../../actions/alertActions";
+import ShowFilesButton from "../files/ShowFilesButton";
 
 class AccountDashboard extends Component {
     componentDidMount() {
@@ -19,6 +20,7 @@ class AccountDashboard extends Component {
         const {customAlerts} = this.props.customAlert;
         const {credentials} = this.props.credential;
         return (
+            <div>
             <div className="container mainAccountDashboard">
                 <div className="row">
                     <div id="accounts" className="col-sm-6 col-md-5 offset-md-1">
@@ -42,6 +44,8 @@ class AccountDashboard extends Component {
                         ))}
                     </div>
                 </div>
+            </div>
+                <ShowFilesButton/>
             </div>
         );
     }
