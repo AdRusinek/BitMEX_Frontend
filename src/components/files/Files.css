@@ -39,20 +39,20 @@
 }
 
 #tutorialTable {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.83);
-    border: rgb(49, 220, 252) 2px groove;
+    border: rgb(49, 220, 252) 1px groove;
 }
 
 #tutorialTable td:hover {
-    background-color: rgba(16, 15, 14, 0.74);
+    background-color: rgba(45, 43, 41, 0.74);
 }
 
 #tutorialTable td {
-
+    padding-top: 10px;
     text-align: center;
-    border:rgb(49, 220, 252) 2px groove;
+    border:rgb(49, 220, 252) 1px groove;
 }
 
 #tutorialTable p {

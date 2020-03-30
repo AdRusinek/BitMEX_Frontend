@@ -1,9 +1,8 @@
 /** REGISTER **/
 #textColorRegister {
-    border: white 1px groove;
+    border: blue 1px groove;
     background-color: rgba(0, 0, 0, 0.85);
     padding: 5% 17% 7%;
-    border-radius: 20px;
     color: white;
 }
 
@@ -26,16 +25,14 @@
 
 #inputs input {
     background-color: rgba(12, 11, 11, 0.0);
-    border-radius: 10px;
     color: white;
-    border: white 1px groove;
+    border: blue 1px groove;
 }
 /** LOGIN **/
 #textColorLogin {
-    border: white 1px groove;
+    border: blue 1px groove;
     background-color: rgba(0, 0, 0, 0.85);
     padding: 5% 17% 7%;
-    border-radius: 20px;
     color: white;
 
 }

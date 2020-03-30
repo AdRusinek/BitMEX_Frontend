@@ -4,9 +4,9 @@ import {css} from "../credentials/AccountStyles.css"
 
 const ShowFilesButton = () => {
     return (
-        <div>
+        <div id="filesButton">
             <React.Fragment>
-                <Link to="/tutorialTable" id="filesButton" className="btn col-md-5 ">
+                <Link to="/tutorialTable"  className="btn col-md-12 ">
                     <text id="showFilesButtonText">Show Guides</text>
                 </Link>
             </React.Fragment>
