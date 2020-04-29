@@ -2,22 +2,16 @@ import React, {Component} from 'react';
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
-import {createCredentials} from "../../actions/accountActions";
+import {postAccount} from "../../actions/accountActions";
 import {css} from "./AccountStyles.css";
 
 class AddAccount extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            credentialsName: "",
-            apiKey: "",
-            apiKeySecret: "",
-            errors: {}
-        };
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-    }
+    state = {
+        accountName: "",
+        apiKey: "",
+        apiKeySecret: "",
+        errors: {}
+    };
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
@@ -25,18 +19,29 @@ class AddAccount extends Component {
         }
     }
 
-    onChange(e) {
+    onChange = e => {
         this.setState({[e.target.name]: e.target.value});
-    }
+    };
 
-    onSubmit(e) {
+    onSubmit = e => {
         e.preventDefault();
-        const newCredential = {
-            credentialsName: this.state.credentialsName,
-            apiKey: this.state.apiKey,
-            apiKeySecret: this.state.apiKeySecret
+        const {accountName, apiKey, apiKeySecret} = this.state;
+        const newAccount = {
+            accountName,
+            apiKey,
+            apiKeySecret
         };
-        this.props.createCredentials(newCredential, this.props.history);
+        this.props.postAccount(
+            newAccount,
+            this.props.closeModal
+        );
+    };
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.errors !== prevState.errors) {
+            return {errors: nextProps.errors};
+        }
+        return null;
     }
 
     render() {
@@ -55,16 +60,16 @@ class AddAccount extends Component {
                                         id="credentialsSet"
                                         type="text"
                                         className={classnames("form-control form-control-lg", {
-                                            "is-invalid": errors.credentialsName
+                                            "is-invalid": errors.accountName
                                         })}
                                         placeholder="Name of your credentials"
-                                        name="credentialsName"
-                                        value={this.state.credentialsName}
+                                        name="accountName"
+                                        value={this.state.accountName}
                                         onChange={this.onChange}
                                     />
-                                    {errors.credentialsName && (
+                                    {errors.accountName && (
                                         <div className="invalid-feedback">
-                                            {errors.credentialsName}
+                                            {errors.accountName}
                                         </div>
                                     )}
                                 </div>
@@ -115,7 +120,8 @@ class AddAccount extends Component {
 }
 
 AddAccount.propTypes = {
-    createCredentials: PropTypes.func.isRequired,
+    postAccount: PropTypes.func.isRequired,
+    closeModal: PropTypes.func.isRequired,
     errors: PropTypes.object.isRequired
 };
 
@@ -123,4 +129,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps,{createCredentials})(AddAccount);
+export default connect(mapStateToProps, {postAccount})(AddAccount);

@@ -1,40 +1,40 @@
 import React, {Component} from 'react';
-import {getCredentials} from "../../actions/accountActions";
+import {getAccounts} from "../../actions/accountActions";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import Account from "./Account";
-import CreateAccountButton from "./CreateAccountButton"
+import CreateAccountButton from "./AddAccountButton"
 import {Link} from "react-router-dom";
-import SetAlertButton from "../alerts/SetAlertButton";
-import Alert from "../alerts/Alert";
+import SetAlertButton from "../Alert/AddAlertButton";
+import Alert from "../Alert/Alert";
 import {getAlerts} from "../../actions/alertActions";
 import ShowFilesButton from "../files/ShowFilesButton";
+import {css} from "./AccountStyles.css";
 
 class AccountDashboard extends Component {
     componentDidMount() {
-        this.props.getCredentials();
+        this.props.getAccounts();
         this.props.getAlerts();
     }
 
     render() {
         const {customAlerts} = this.props.customAlert;
-        const {credentials} = this.props.credential;
+        const {accounts} = this.props.account;
         return (
-            <div>
-            <div className="container mainAccountDashboard">
+            <div className="container user-dashboard">
                 <div className="row">
-                    <div id="accounts" className="col-sm-6 col-md-5 offset-md-1">
+                    <div className="col-sm-6 accounts">
                         <CreateAccountButton/>
-                        {credentials.map(credential => (
-                            <Link className="nav-link" to={`/dashboard/${credential.id}`}>
+                        {accounts.map(account => (
+                            <Link className="nav-link" to={`/dashboard/${account.id}`}>
                                 <Account
-                                    key={credential.id}
-                                    credential={credential}
+                                    key={account.id}
+                                    account={account}
                                 />
                             </Link>
                         ))}
                     </div>
-                    <div id="alerts" className="col-sm-6 col-md-5">
+                    <div id="alerts" className="col-sm-6 alerts">
                         <SetAlertButton/>
                         {customAlerts.map(customAlert => (
                             <Alert
@@ -44,23 +44,24 @@ class AccountDashboard extends Component {
                         ))}
                     </div>
                 </div>
-            </div>
-                <ShowFilesButton/>
+                <div className="guides">
+                    <ShowFilesButton/>
+                </div>
             </div>
         );
     }
 }
 
 AccountDashboard.propTypes = {
-    credential: PropTypes.object.isRequired,
-    getCredentials: PropTypes.func.isRequired,
+    account: PropTypes.object.isRequired,
+    getAccounts: PropTypes.func.isRequired,
     customAlert: PropTypes.object.isRequired,
     getAlerts: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-    credential: state.credential,
+    account: state.account,
     customAlert: state.customAlert
 });
 
-export default connect(mapStateToProps, {getCredentials, getAlerts})(AccountDashboard);
+export default connect(mapStateToProps, {getAccounts: getAccounts, getAlerts})(AccountDashboard);

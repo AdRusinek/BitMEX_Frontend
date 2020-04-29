@@ -1,21 +1,21 @@
 import axios from "axios";
-import {GET_CREDENTIALS, GET_ERRORS} from "./types";
+import {POST_ACCOUNT, GET_ACCOUNTS, GET_ERRORS} from "./types";
 
-export const getCredentials = () => async dispatch => {
+export const getAccounts = () => async dispatch => {
     const res = await axios.get("/api/accounts/get-accounts");
     dispatch({
-        type: GET_CREDENTIALS,
+        type: GET_ACCOUNTS,
         payload: res.data
     });
 };
 
-export const createCredentials = (newCredentials, history) => async dispatch => {
+export const postAccount = (newAccount, closeModal) => async dispatch => {
     try {
-        await axios.post("/api/accounts/add", newCredentials);
-        history.push("/credentials");
+        const res = await axios.post("/api/accounts/add", newAccount);
+        closeModal();
         dispatch({
-            type: GET_ERRORS,
-            payload: {}
+            type: POST_ACCOUNT,
+            payload: res.data
         });
     } catch (err) {
         dispatch({

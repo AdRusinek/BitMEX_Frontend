@@ -1,4 +1,4 @@
-import { GET_ORDERS } from "../actions/types";
+import { GET_LIMIT_ORDERS } from "../actions/types";
 
 const initialState = {
   orders: [],
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_ORDERS:
+    case GET_LIMIT_ORDERS:
       return {
         ...state,
         orders: action.payload

@@ -2,22 +2,16 @@ import React, {Component} from 'react';
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
-import {setAlert} from "../../actions/alertActions";
-import {css} from "../credentials/AccountStyles.css";
+import {postAlert} from "../../actions/alertActions";
+import {css} from "../Account/AccountStyles.css";
 
 class AddAlert extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            alertMessage: "",
-            alertTriggeringPrice: "",
-            direction: "above",
-            errors: {}
-        };
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-    }
+    state = {
+        alertMessage: "",
+        alertTriggeringPrice: "",
+        direction: "above",
+        errors: {}
+    };
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
@@ -25,24 +19,32 @@ class AddAlert extends Component {
         }
     }
 
-    onChange(e) {
+    onChange = e => {
         const {name, value, type, checked} = e.target;
         type === "checkbox" ? this.setState({[name]: checked}) :
             this.setState({
                 [name]: value
             })
-    }
+    };
 
-    onSubmit(e) {
+    onSubmit = e => {
         e.preventDefault();
-
+        const {alertMessage, alertTriggeringPrice, direction} = this.state;
         const newAlert = {
-            alertMessage: this.state.alertMessage,
-            alertTriggeringPrice: this.state.alertTriggeringPrice,
-            direction: this.state.direction
+            alertMessage,
+            alertTriggeringPrice,
+            direction
         };
-        console.log(newAlert);
-        this.props.setAlert(newAlert, this.props.history);
+        this.props.postAlert(
+            newAlert,
+            this.props.closeModal);
+    };
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.errors !== prevState.errors) {
+            return {errors: nextProps.errors};
+        }
+        return null;
     }
 
     render() {
@@ -119,7 +121,8 @@ class AddAlert extends Component {
 }
 
 AddAlert.propTypes = {
-    setAlert: PropTypes.func.isRequired,
+    postAlert: PropTypes.func.isRequired,
+    closeModal: PropTypes.func.isRequired,
     errors: PropTypes.object.isRequired
 };
 
@@ -127,4 +130,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, {setAlert})(AddAlert);
+export default connect(mapStateToProps, {postAlert})(AddAlert);

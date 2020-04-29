@@ -10,7 +10,6 @@ class Position extends Component {
             <tr>
               <td>{position.symbol}</td>
               <td>{position.currentQty}</td>
-              <td>{position.lastValue}</td>
               <td>{position.avgEntryPrice}</td>
               <td>{position.markPrice}</td>
               <td>{position.liquidationPrice}</td>

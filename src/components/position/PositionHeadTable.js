@@ -12,7 +12,6 @@ class PositionHeadTable extends Component {
             <tr>
               <th scope="col">Symbol</th>
               <th scope="col">Size</th>
-              <th scope="col">Value</th>
               <th scope="col">Entry Price</th>
               <th scope="col">Mark Price</th>
               <th scope="col">Liq. Price</th>

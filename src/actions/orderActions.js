@@ -1,10 +1,10 @@
 import axios from "axios";
-import { GET_ORDERS } from "./types";
+import { GET_LIMIT_ORDERS } from "./types";
 
-export const getOrdersLimit = (id) => async dispatch => {
-  const res = await axios.get(`/api/orders/get-orders/new/Limit/${id}`);
+export const getLimitOrders = (id) => async dispatch => {
+  const res = await axios.get(`/api/orders/get-limit-orders/${id}`);
   dispatch({
-    type: GET_ORDERS,
+    type: GET_LIMIT_ORDERS,
     payload: res.data
   });
 };

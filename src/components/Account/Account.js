@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 
 class Account extends Component {
     render() {
-        const {credential} = this.props;
+        const {account} = this.props;
         return (
             <div>
                 <div className="container">
-                    <div id="credentialsElements" className="col-md-12 m-auto">
-                        <td>{credential.credentialsName}</td>
+                    <div id="" className="col-md-12 m-auto">
+                        <td>{account.accountName}</td>
                     </div>
                 </div>
             </div>

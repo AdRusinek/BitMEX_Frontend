@@ -1,4 +1,4 @@
-import { GET_WAITING_TRAILING_STOPS } from "../actions/types";
+import { GET_WAITING_TRAILING_STOPS, POST_TRAILING_STOP } from "../actions/types";
 
 const initialState = {
   waitingTrailingStops: [],
@@ -11,6 +11,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         waitingTrailingStops: action.payload
+      };
+    case POST_TRAILING_STOP:
+      return {
+        ...state,
+        waitingTrailingStop: [action.payload, ...state.waitingTrailingStops]
       };
     default:
       return state;

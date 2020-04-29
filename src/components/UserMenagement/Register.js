@@ -50,18 +50,20 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div id="mainDivRegister" className="register">
-        <br />
-        <br />
-        <div className="container">
-          <div className="row">
-            <div id="textColorRegister" className="col-md-8 m-auto">
-              <p className="text-center">Create your Account</p>
-              <form id="inputs" onSubmit={this.onSubmit}>
+      <div className="login-register">
+        <div className="logo">
+          <i className="fa fa-user-circle-o"/>
+        </div>
+        <h2>Create Account</h2>
+        <div className="form">
+              <form onSubmit={this.onSubmit}>
                 <div className="form-group">
+                  <label title="Full name" htmlFor="fullName">
+                    <i className="fa fa-user-o"/>
+                  </label>
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("", {
                       "is-invalid": errors.fullName
                     })}
                     placeholder="Full Name"
@@ -74,9 +76,12 @@ class Register extends Component {
                   )}
                 </div>
                 <div className="form-group">
+                  <label title="Username" htmlFor="username">
+                    <i className="fa fa-user"/>
+                  </label>
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("", {
                       "is-invalid": errors.username
                     })}
                     placeholder="Email Address (Username)"
@@ -89,9 +94,12 @@ class Register extends Component {
                   )}
                 </div>
                 <div className="form-group">
+                  <label title="Password" htmlFor="password">
+                    <i className="fa fa-key"/>
+                  </label>
                   <input
                     type="password"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("", {
                       "is-invalid": errors.password
                     })}
                     placeholder="Password"
@@ -104,9 +112,12 @@ class Register extends Component {
                   )}
                 </div>
                 <div className="form-group">
+                  <label title="Password" htmlFor="password">
+                    <i className="fa fa-key"/>
+                  </label>
                   <input
                     type="password"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("", {
                       "is-invalid": errors.confirmPassword
                     })}
                     placeholder="Confirm Password"
@@ -120,15 +131,14 @@ class Register extends Component {
                     </div>
                   )}
                 </div>
-                <input
-                  id="authorizationSubmitButton"
-                  type="submit"
-                  className="btn btn-block mt-4"
-                />
+                <div className="btn-group">
+                  <button
+                      type="submit"
+                      className="login-register-btn"
+                  >Register</button>
+                </div>
               </form>
             </div>
-          </div>
-        </div>
       </div>
     );
   }

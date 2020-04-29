@@ -1,20 +1,20 @@
 import React, {Component} from "react";
-import Order from "./order/Order";
-import Position from "./position/Position";
+import Order from "./Order/Order";
+import Position from "./Position/Position";
 import {connect} from "react-redux";
-import {getOrdersLimit} from "../actions/orderActions";
+import {getLimitOrders} from "../actions/orderActions";
 import {getPositions} from "../actions/positionActions";
-import {getStops} from "../actions/stopActions";
-import {getWaitingTrailingStops} from "../actions/trailingStopActions";
+import {getStopOrders} from "../actions/stopActions";
+import {getWaitingTrailingStops} from "../actions/trailingActions";
 import PropTypes from "prop-types";
-import OrderHeadTable from "./order/OrderHeadTable";
-import PositionHeadTable from "./position/PositionHeadTable";
-import StopHeadTable from "./stop/StopHeadTable";
-import Stop from "./stop/Stop";
-import WaitingTrailingStopHeadTable from "./waitingTrailingStop/WaitingTrailingStopHeadTable";
-import WaitingTrailingStop from "./waitingTrailingStop/WaitingTrailingStop";
+import OrderHeadTable from "./Order/OrderHeadTable";
+import PositionHeadTable from "./Position/PositionHeadTable";
+import StopHeadTable from "./Stop/StopHeadTable";
+import Stop from "./Stop/Stop";
+import WaitingTrailingStopHeadTable from "./WaitingTrailingStop/WaitingTrailingStopHeadTable";
+import WaitingTrailingStop from "./WaitingTrailingStop/WaitingTrailingStop";
 import {Link} from "react-router-dom";
-import ButtonTrailingStop from "./trailingStop/ButtonTrailingStop";
+import ButtonTrailingStop from "./WaitingTrailingStop/AddWaitingTrailingStopButton";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -66,7 +66,7 @@ class Dashboard extends Component {
                             </div>
                         </div>
                     </div>
-                    <ButtonTrailingStop id={id}/>
+                    <ButtonTrailingStop accountId={id}/>
                 </div>
             </div>
         );
@@ -92,8 +92,8 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-    getOrdersLimit,
-    getStops,
+    getOrdersLimit: getLimitOrders,
+    getStops: getStopOrders,
     getPositions,
     getWaitingTrailingStops
 })(Dashboard);

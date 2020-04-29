@@ -1,5 +1,5 @@
 import axios from "axios";
-import {GET_ALERTS, GET_ERRORS} from "./types";
+import {POST_ALERT, GET_ALERTS, GET_ERRORS} from "./types";
 
 export const getAlerts = () => async dispatch => {
     const res = await axios.get("/api/alerts/get-alerts");
@@ -9,13 +9,13 @@ export const getAlerts = () => async dispatch => {
     });
 };
 
-export const setAlert = (newAlert, history) => async dispatch => {
+export const postAlert = (newAlert, closeModal) => async dispatch => {
     try {
-        await axios.post("/api/alerts/setAlert", newAlert);
-        history.push("/credentials");
+        const res = await axios.post("/api/alerts/set-alert", newAlert);
+        closeModal();
         dispatch({
-            type: GET_ERRORS,
-            payload: {}
+            type: POST_ALERT,
+            payload: res.data
         });
     } catch (err) {
         dispatch({

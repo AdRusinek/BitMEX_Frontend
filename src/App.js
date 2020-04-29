@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./store";
-import Trailing from "./components/UserActions/Trailing";
+import Trailing from "./components/WaitingTrailingStop/AddWaitingTrailingStop";
 import Landing from "./components/Layout/Landing";
 import Register from "./components/UserMenagement/Register";
 import Login from "./components/UserMenagement/Login";
@@ -15,9 +15,7 @@ import setJWTToken from "./securityUtils/setJWTToken";
 import {SET_CURRENT_USER} from "./actions/types";
 import {logout} from "./actions/securityActions";
 import SecuredRoute from "./securityUtils/SecureRoute";
-import Credentials from "./components/credentials/AccountDashboard";
-import AddCredentials from "./components/credentials/AddAccount";
-import AddAlert from "./components/alerts/AddAlert";
+import AccountDashboard from "./components/Account/AccountDashboard";
 import LeverageGuide from "./components/files/LeverageGuide";
 import StopMarket from "./components/files/StopMarket";
 import TutorialTable from "./components/files/TutorialTable";
@@ -50,21 +48,18 @@ class App extends Component {
                         {
                             // Public routs
                         }
-                        <Route exact path="/" component={Landing}/>
+                        <Route exact path="/" component={Login}/>
                         <Route exact path="/register" component={Register}/>
-                        <Route exact path="/login" component={Login}/>
                         {
                             // Private routs
                         }
                         <Switch>
-                            <SecuredRoute exact path="/credentials" component={Credentials}/>
-                            <SecuredRoute exact path="/credentials/:id" component={Credentials}/>
+                            <SecuredRoute exact path="/accounts" component={AccountDashboard}/>
+                            <SecuredRoute exact path="/accounts/:id" component={AccountDashboard}/>
                             <SecuredRoute exact path="/tutorialTable" component={TutorialTable}/>
                             <SecuredRoute exact path="/bitmexStepByStep" component={BitmexStepByStep}/>
                             <SecuredRoute exact path="/leverage" component={LeverageGuide}/>
                             <SecuredRoute exact path="/stopMarket" component={StopMarket}/>
-                            <SecuredRoute exact path="/addCredentials" component={AddCredentials}/>
-                            <SecuredRoute exact path="/addAlert" component={AddAlert}/>
                             <SecuredRoute exact path="/trailing/:id" component={Trailing}/>
                             <SecuredRoute exact path="/dashboard/:id" component={Dashboard}/>
                         </Switch>
@@ -74,5 +69,4 @@ class App extends Component {
         );
     }
 }
-
 export default App;

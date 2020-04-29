@@ -1,0 +1,220 @@
+.user-dashboard {
+    border: 4px yellow;
+}
+
+.accounts {
+    background: pink;
+}
+
+.alerts {
+    background: red;
+}
+
+.guides {
+    background: greenyellow;
+}
+/*.mainAccountDashboard {*/
+    /*margin-top: 3%;*/
+    /*border: black 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.75);*/
+    /*padding-top: 4%;*/
+    /*padding-bottom: 4%;*/
+    /*color: white;*/
+
+/*}*/
+
+/*#accounts{*/
+    /*border: #b400b4 1px groove;*/
+    /*margin-left: 80px;*/
+    /*background-color: rgba(0, 0, 0, 0.75);*/
+    /*padding: 4%;*/
+/*}*/
+
+/*#mainCredentialsContainer {*/
+    /*border: #b400b4 1px groove;*/
+    /*margin-left: 90px;*/
+    /*color: white;*/
+/*}*/
+
+/*#mainDivAccount{*/
+    /*display: inline-block;*/
+/*}*/
+
+/*#accountDiv{*/
+    /*float: left;*/
+/*}*/
+
+/*#credentialDivs {*/
+    /*border: #b400b4 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*padding: 5% 17% 7%;*/
+    /*color: white;*/
+/*}*/
+
+/*#credentialsTextSet{*/
+    /*color: white;*/
+    /*font-size: 30px;*/
+/*}*/
+
+/*#credentialsSet {*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*color: white;*/
+    /*border: #b400b4 1px groove;*/
+/*}*/
+
+/*#credentialsSetSubmit {*/
+    /*border: #b400b4 1px groove;*/
+    /*color: white;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+/*}*/
+
+/*#credentialsSetSubmit:hover {*/
+    /*background-color: rgb(12, 11, 11);*/
+/*}*/
+
+/*#createCredentialsButton {*/
+    /*margin-bottom: 30px;*/
+    /*border: #b400b4 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*text-align: center;*/
+/*}*/
+
+
+/*#credentialsElements {*/
+    /*border: #b400b4 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*padding: 10px;*/
+    /*color: white;*/
+    /*text-align: center;*/
+/*}*/
+
+/*#credentialsElements td  {*/
+    /*display: inline-block;*/
+    /*!*font-size: 20px;*!*/
+/*}*/
+
+/*#credentialsSubmitButtonText{*/
+    /*font-size: 18px;*/
+    /*color: white;*/
+/*}*/
+/*#credentialsElements:hover {*/
+    /*background-color: rgb(16, 15, 14);*/
+    /*color: white;*/
+/*}*/
+
+/*#createCredentialsButton:hover{*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
+
+/*#mainAccountDiv{*/
+    /*margin-top: 3%;*/
+/*}*/
+
+/*!** ALERTS **!*/
+
+/*#alertElements {*/
+    /*border: #8149fc 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*padding: 10px;*/
+    /*color: white;*/
+    /*text-align: center;*/
+/*}*/
+
+
+/*#selectDirection{*/
+    /*border: #8149fc 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.75);*/
+    /*margin-left: 10px;*/
+    /*padding: 2.5% 25%;*/
+    /*font-size: 19px;*/
+    /*margin-bottom: 15px;*/
+    /*color: #9c9c9c;*/
+/*}*/
+
+/*#directionLabelText{*/
+    /*font-size: 19px;*/
+/*}*/
+
+/*#alerts{*/
+    /*border: #8149fc 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.75);*/
+    /*margin-left: 40px;*/
+    /*padding: 4%;*/
+/*}*/
+
+/*#alertDivs {*/
+    /*border: #8149fc 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*padding: 5% 17% 7%;*/
+    /*color: white;*/
+/*}*/
+/*#addAlertMainDiv{*/
+    /*margin-top: 3%;*/
+/*}*/
+/*#alertTextSet {*/
+    /*color: white;*/
+    /*font-size: 30px;*/
+/*}*/
+
+/*#alertSet {*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*color: white;*/
+    /*border: #8149fc 1px groove;*/
+/*}*/
+
+/*#alertSubmit {*/
+    /*border: #8149fc 1px groove;*/
+    /*color: white;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+/*}*/
+
+/*#alertSubmit:hover {*/
+    /*background-color: rgb(12, 11, 11);*/
+/*}*/
+
+/*#alertButton {*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*text-align: center;*/
+/*}*/
+
+/*#createAlertButton{*/
+    /*margin-bottom: 30px;*/
+    /*border: #8149fc 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*text-align: center;*/
+/*}*/
+
+/*#mainAlertDiv{*/
+    /*margin-bottom: 4%;*/
+/*}*/
+
+/*#alertButton:hover {*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
+
+/*#alertSubmitButtonText {*/
+    /*font-size: 18px;*/
+    /*!*padding-top: 10px;*!*/
+    /*color: white;*/
+/*}*/
+
+/*!** FILES **!*/
+
+/*#filesButton {*/
+    /*margin-top: 20px;*/
+    /*margin-left: 30%;*/
+    /*margin-right: 30%;*/
+    /*padding-top: 2%;*/
+    /*padding-bottom: 2%;*/
+    /*border: #11d6fc 1px groove;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+/*}*/
+
+/*#filesButton:hover{*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
+
+/*#showFilesButtonText{*/
+    /*font-size: 19px;*/
+    /*color: white;*/
+/*}*/

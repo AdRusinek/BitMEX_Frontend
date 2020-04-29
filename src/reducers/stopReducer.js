@@ -1,4 +1,4 @@
-import { GET_STOPS } from "../actions/types";
+import { GET_STOP_ORDERS } from "../actions/types";
 
 const initialState = {
   stops: [],
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_STOPS:
+    case GET_STOP_ORDERS:
       return {
         ...state,
         stops: action.payload

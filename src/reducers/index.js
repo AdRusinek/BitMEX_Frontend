@@ -5,7 +5,7 @@ import positionReducer from "./positionReducer";
 import stopReducer from "./stopReducer";
 import waitingTrailingStopReducer from "./waitingTrailingStopReducer";
 import securityReducer from "./securityReducer";
-import credentialsReducer from "./credentialsReducer";
+import credentialsReducer from "./accountsReducer";
 import alertReducer from "./alertReducer";
 
 
@@ -16,7 +16,7 @@ export default combineReducers({
   position: positionReducer,
   waitingTrailingStop: waitingTrailingStopReducer,
   security: securityReducer,
-  credential: credentialsReducer,
+  account: credentialsReducer,
   customAlert: alertReducer,
 
 });

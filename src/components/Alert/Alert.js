@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {css} from "../credentials/AccountStyles.css";
+import {css} from "../Account/AccountStyles.css";
 
 class Alert extends Component {
     render() {

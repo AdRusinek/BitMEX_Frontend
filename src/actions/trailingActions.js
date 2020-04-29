@@ -1,13 +1,21 @@
 import axios from "axios";
-import { GET_ERRORS } from "./types";
+import {POST_TRAILING_STOP, GET_ERRORS, GET_WAITING_TRAILING_STOPS} from "./types";
 
-export const createTrailing = (trailing, history,id) => async dispatch => {
+export const getWaitingTrailingStops = (id) => async dispatch => {
+  const res = await axios.get(`/api/trailing-stops/get-waiting-trailing-stops/${id}`);
+  dispatch({
+    type: GET_WAITING_TRAILING_STOPS,
+    payload: res.data
+  });
+};
+
+export const postTrailingStop = (trailing, closeModal, id) => async dispatch => {
   try {
-    await axios.post(`/api/trailing-stops/set-trailing/${id}`, trailing);
-    history.push(`/dashboard/${id}`);
+    const res = await axios.post(`/api/trailing-stops/set-trailing/${id}`, trailing);
+    closeModal();
     dispatch({
-      type: GET_ERRORS,
-      payload: {}
+      type: POST_TRAILING_STOP,
+      payload: res.data
     });
   } catch (err) {
     dispatch({
