@@ -9,7 +9,12 @@ import {connect} from "react-redux";
 
 const customStyles = {
     content: {
-        height: "500px"
+        marginTop: '90px',
+        marginBottom: '90px',
+        marginLeft: '150px',
+        marginRight: '150px',
+        backgroundColor: 'gray',
+        borderRadius: '20px'
     }
 };
 
@@ -44,15 +49,17 @@ export class AddAccountButton extends Component {
                     >
                         <i className="fa fa-address-card-o"/> Add Account
                     </button>
-                    <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} style={customStyles}
+                    <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal}
+                           className="Modal" overlayClassName="Overlay"
                            ariaHideApp={false}>
                         <button
                             type="button"
-                            className="btn btn-danger mb-2"
+                            className="close-modal"
                             onClick={this.handleCloseModal}
                         >
-                            <i className="far fa-times-circle mr-1 "/>
-                            Close Modal
+                            <div className="logo">
+                            <i className="fa fa-window-close-o"/>
+                            </div>
                         </button>
                         <AddAccount closeModal={this.handleCloseModal}/>
                     </Modal>

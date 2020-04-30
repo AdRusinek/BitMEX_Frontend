@@ -1,16 +1,10 @@
 import React, {Component} from 'react';
 import Modal from "react-modal";
-import {css} from ".//TrailingStylees.css";
+import {css} from "../Account/AccountStyles.css";
 import {connect} from "react-redux";
 import {closeModalClearState} from "../../actions/commonActions";
 import PropTypes from "prop-types";
 import AddTrailing from "./AddWaitingTrailingStop";
-
-const customStyles = {
-    content: {
-        height: "500px"
-    }
-};
 
 export class AddWaitingTrailingStopButton extends Component {
     constructor() {
@@ -43,15 +37,16 @@ export class AddWaitingTrailingStopButton extends Component {
                     >
                         <i className="far fa-plus-square"/> Add Trailing Stop
                     </button>
-                    <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} style={customStyles}
-                           ariaHideApp={false}>
+                    <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal}
+                           className="Modal" overlayClassName="Overlay" ariaHideApp={false}>
                         <button
                             type="button"
-                            className="btn btn-danger mb-2"
+                            className="close-modal"
                             onClick={this.handleCloseModal}
                         >
-                            <i className="far fa-times-circle mr-1 "/>
-                            Close Modal
+                            <div className="logo">
+                                <i className="fa fa-window-close-o"/>
+                            </div>
                         </button>
                         <AddTrailing paramsAccountId={this.props.accountId} closeModal={this.handleCloseModal}/>
                     </Modal>

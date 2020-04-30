@@ -21,7 +21,7 @@ class AccountDashboard extends Component {
         const {customAlerts} = this.props.customAlert;
         const {accounts} = this.props.account;
         return (
-            <div className="container user-dashboard">
+            <div className="user-dashboard">
                 <div className="row">
                     <div className="col-sm-6 accounts">
                         <AddAccountButton/>

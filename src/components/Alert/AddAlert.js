@@ -58,10 +58,10 @@ class AddAlert extends Component {
                                 BitMEX Alerts
                             </p>
                             <form onSubmit={this.onSubmit}>
-                                <div>
-                                    <label id="directionLabelText">Price goes: </label>
+                                <div className="alert-options">
+                                    <text>Price goes:  </text>
                                     <select
-                                        id="selectDirection"
+                                        className="alert-select"
                                         value={this.state.direction}
                                         onChange={this.onChange}
                                         name="direction"
@@ -74,7 +74,7 @@ class AddAlert extends Component {
                                     <input
                                         id="alertSet"
                                         type="text"
-                                        className={classnames("form-control form-control-lg", {
+                                        className={classnames("", {
                                             "is-invalid": errors.alertTriggeringPrice
                                         })}
                                         placeholder="Starting Price"
@@ -92,7 +92,7 @@ class AddAlert extends Component {
                                     <input
                                         id="alertSet"
                                         type="text"
-                                        className={classnames("form-control form-control-lg", {
+                                        className={classnames("", {
                                             "is-invalid": errors.alertMessage
                                         })}
                                         placeholder="Your alert message"
@@ -106,11 +106,12 @@ class AddAlert extends Component {
                                         </div>
                                     )}
                                 </div>
-                                <input
-                                    id="alertSubmit"
-                                    type="submit"
-                                    className="btn btn-block mt-4"
-                                />
+                                <div className="btn-group-modal">
+                                    <button
+                                        type="submit"
+                                        className="register-btn-modal"
+                                    >Add Alert</button>
+                                </div>
                             </form>
                         </div>
                     </div>

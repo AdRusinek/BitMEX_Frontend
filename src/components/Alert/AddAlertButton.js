@@ -6,12 +6,6 @@ import {closeModalClearState} from "../../actions/commonActions";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 
-const customStyles = {
-    content: {
-        height: "500px"
-    }
-};
-
 export class AddAlertButton extends Component {
     constructor() {
         super();
@@ -44,15 +38,16 @@ export class AddAlertButton extends Component {
                     >
                         <i className="fa fa-bell-o"/> Add Alert
                     </button>
-                    <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} style={customStyles}
-                           ariaHideApp={false}>
+                    <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal}
+                           className="Modal" overlayClassName="Overlay" ariaHideApp={false}>
                         <button
                             type="button"
-                            className="btn btn-danger mb-2"
+                            className="close-modal"
                             onClick={this.handleCloseModal}
                         >
-                            <i className="far fa-times-circle mr-1 "/>
-                            Close Modal
+                            <div className="logo">
+                                <i className="fa fa-window-close-o"/>
+                            </div>
                         </button>
                         <AddAlert closeModal={this.handleCloseModal}/>
                     </Modal>

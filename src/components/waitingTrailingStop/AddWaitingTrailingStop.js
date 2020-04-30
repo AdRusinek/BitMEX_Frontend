@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {postTrailingStop} from "../../actions/trailingActions";
 import classnames from "classnames";
+import {css} from "../Account/AccountStyles.css";
+
 
 class AddWaitingTrailingStop extends Component {
 
@@ -47,74 +49,67 @@ class AddWaitingTrailingStop extends Component {
         const {errors} = this.state;
 
         return (
-            <div>
-                <br/>
-                <br/>
-                <div className="container">
-                    <div className="row">
-                        <div id="trailingStopDivs" className="col-md-8 m-auto">
-                            <p id="trailingStopTextSet" className="lead text-center">
-                                Set Trailing Stop
-                            </p>
-                            <form onSubmit={this.onSubmit}>
-                                <div className="form-group">
-                                    <input
-                                        id="trailingStopSet"
-                                        type="text"
-                                        className={classnames("form-control form-control-lg", {
-                                            "is-invalid": errors.startingPrice
-                                        })}
-                                        placeholder="Starting Price"
-                                        name="startingPrice"
-                                        value={this.state.startingPrice}
-                                        onChange={this.onChange}
-                                    />
-                                    {errors.startingPrice && (
-                                        <div className="invalid-feedback">
-                                            {errors.startingPrice}
-                                        </div>
-                                    )}
+            <div className="container">
+                <div className="col-md-8 m-auto">
+                    <p className="trailing-text">
+                        Set Trailing Stop
+                    </p>
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group-modal">
+                            <input
+                                type="text"
+                                className={classnames("", {
+                                    "is-invalid": errors.startingPrice
+                                })}
+                                placeholder="Starting Price"
+                                name="startingPrice"
+                                value={this.state.startingPrice}
+                                onChange={this.onChange}
+                            />
+                            {errors.startingPrice && (
+                                <div className="invalid-feedback">
+                                    {errors.startingPrice}
                                 </div>
-                                <div className="form-group">
-                                    <input
-                                        id="trailingStopSet"
-                                        type="number"
-                                        className={classnames("form-control form-control-lg", {
-                                            "is-invalid": errors.quantity
-                                        })}
-                                        placeholder="Quantity"
-                                        name="quantity"
-                                        value={this.state.quantity}
-                                        onChange={this.onChange}
-                                    />
-                                    {errors.quantity && (
-                                        <div className="invalid-feedback">{errors.quantity}</div>
-                                    )}
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        id="trailingStopSet"
-                                        type="number"
-                                        className={classnames("form-control form-control-lg", {
-                                            "is-invalid": errors.trialValue
-                                        })}
-                                        placeholder="Trial Value"
-                                        name="trialValue"
-                                        value={this.state.trialValue}
-                                        onChange={this.onChange}
-                                    />
-                                    {errors.trialValue && (
-                                        <div className="invalid-feedback">{errors.trialValue}</div>
-                                    )}
-                                </div>
-                                <input
-                                    id="trailingStopSetSubmit"
-                                    type="submit"
-                                    className="btn btn-block mt-4"
-                                />
-                            </form>
+                            )}
                         </div>
-                    </div>
+                        <div className="form-group-modal">
+                            <input
+                                type="number"
+                                className={classnames("", {
+                                    "is-invalid": errors.quantity
+                                })}
+                                placeholder="Quantity"
+                                name="quantity"
+                                value={this.state.quantity}
+                                onChange={this.onChange}
+                            />
+                            {errors.quantity && (
+                                <div className="invalid-feedback">{errors.quantity}</div>
+                            )}
+                        </div>
+                        <div className="form-group-modal">
+                            <input
+                                type="number"
+                                className={classnames("", {
+                                    "is-invalid": errors.trialValue
+                                })}
+                                placeholder="Trial Value"
+                                name="trialValue"
+                                value={this.state.trialValue}
+                                onChange={this.onChange}
+                            />
+                            {errors.trialValue && (
+                                <div className="invalid-feedback">{errors.trialValue}</div>
+                            )}
+                        </div>
+                        <div className="btn-group-modal">
+                            <button
+                                type="submit"
+                                className="register-btn-modal"
+                            >Add Trailing
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         );

@@ -77,24 +77,87 @@
     background: #949494;
 }
 
-.guides {
-    margin-top: 50px;
-    padding-right: 300px;
-    padding-left: 300px;
+.alert-options{
+    text-align: center;
 }
 
-.guide-display {
-    background: rgba(255, 255, 255, 0.73);
-    padding: 8px;
-    margin-top: 10px;
+.alert-options > text {
+    font-size: 13px;
+}
+
+.alert-select {
+    padding: 2px 25px;
+}
+
+.guides {
+    margin-top: 50px;
     text-align: center;
+}
+
+.guide-display button {
+    background: rgba(255, 255, 255, 0.73);
+    border: 2px #111111;
     border-radius: 5px;
-    backdrop-filter: blur(15px);
+    padding: 5px 70px;
+}
+
+.guide-display button:hover {
+    background: #949494;
 }
 
 #guide-link {
-    padding: 10px 152px;
     text-decoration: none;
     font-size: 16px;
     color: black;
+}
+
+.trailing-text {
+    text-align: center;
+}
+
+.Modal {
+    position: absolute;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    padding-bottom: 5%;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.btn-group-modal {
+    text-align: center;
+}
+
+.register-btn-modal {
+    color: black;
+    background: white;
+    border: none;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.form-group-modal {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    backdrop-filter: blur(15px);
+    color: white;
+}
+
+
+::placeholder {
+    color: white;
 }

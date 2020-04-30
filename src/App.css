@@ -8,6 +8,8 @@ body {
     background-size: 100%;
 }
 
+*:focus {outline:none}
+
 #ButtonTrailingStop {
     border: rgb(99, 78, 255) 1px groove;
     margin-top: 10px;
