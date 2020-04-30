@@ -13,8 +13,9 @@ import StopHeadTable from "./Stop/StopHeadTable";
 import Stop from "./Stop/Stop";
 import WaitingTrailingStopHeadTable from "./WaitingTrailingStop/WaitingTrailingStopHeadTable";
 import WaitingTrailingStop from "./WaitingTrailingStop/WaitingTrailingStop";
-import {Link} from "react-router-dom";
-import ButtonTrailingStop from "./WaitingTrailingStop/AddWaitingTrailingStopButton";
+import AddWaitingTrailingStopButton from "./WaitingTrailingStop/AddWaitingTrailingStopButton";
+import {css} from "./UserDashboard.css";
+import ExchangeTable from "./ExchangeTable";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -33,41 +34,33 @@ class Dashboard extends Component {
         const {waitingTrailingStops} = this.props.waitingTrailingStop;
 
         return (
-            <div>
-                <div>
-                    <div id="mainDashboardContainer" className="container">
-                        <br/>
-                        <div className="col-md-12">
-                            <div className="row">
-                                <div id="mainDashboardContainerElements" className="col-md-10">
-                                    <WaitingTrailingStopHeadTable/>
-                                    {waitingTrailingStops.map(waitingTrailingStop => (
-                                        <WaitingTrailingStop
-                                            key={waitingTrailingStop.id}
-                                            waitingTrailingStop={waitingTrailingStop}
-                                        />
-                                    ))}
-                                    <StopHeadTable/>
-                                    {stops.map(stop => (
-                                        <Stop key={stop.orderID} stop={stop}/>
-                                    ))}
-                                    <PositionHeadTable/>
-                                    {positions.map(position => (
-                                        <Position
-                                            key={position.openingTimestamp}
-                                            position={position}
-                                        />
-                                    ))}
-                                    <OrderHeadTable/>
-                                    {orders.map(order => (
-                                        <Order key={order.orderID} order={order}/>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <ButtonTrailingStop accountId={id}/>
+            <div className="container user-dashboard">
+                <div className="col-sm-6">
+                    <WaitingTrailingStopHeadTable/>
+                    {waitingTrailingStops.map(waitingTrailingStop => (
+                        <WaitingTrailingStop
+                            key={waitingTrailingStop.id}
+                            waitingTrailingStop={waitingTrailingStop}
+                        />
+                    ))}
+                    <StopHeadTable/>
+                    {stops.map(stop => (
+                        <Stop key={stop.orderID} stop={stop}/>
+                    ))}
+                    <PositionHeadTable/>
+                    {positions.map(position => (
+                        <Position
+                            key={position.openingTimestamp}
+                            position={position}
+                        />
+                    ))}
+                    <OrderHeadTable/>
+                    {orders.map(order => (
+                        <Order key={order.orderID} order={order}/>
+                    ))}
                 </div>
+                <AddWaitingTrailingStopButton accountId={id}/>
+                <ExchangeTable/>
             </div>
         );
     }

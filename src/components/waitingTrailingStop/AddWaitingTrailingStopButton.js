@@ -32,7 +32,7 @@ export class AddWaitingTrailingStopButton extends Component {
                 <React.Fragment>
                     <button
                         type="button"
-                        className="btn btn-outline-primary mb-3 text-left"
+                        className=""
                         onClick={this.handleOpenModal}
                     >
                         <i className="far fa-plus-square"/> Add Trailing Stop

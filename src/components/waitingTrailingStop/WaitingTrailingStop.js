@@ -4,8 +4,8 @@ class WaitingTrailingStop extends Component {
   render() {
     const { waitingTrailingStop } = this.props;
     return (
-      <div className="container">
-        <table id="waitingTrailingStop" class="table-sm">
+      <div>
+        <table>
           <thead>
             <tr>
               <td>{waitingTrailingStop.id}</td>

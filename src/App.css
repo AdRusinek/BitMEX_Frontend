@@ -10,193 +10,193 @@ body {
 
 *:focus {outline:none}
 
-#ButtonTrailingStop {
-    border: rgb(99, 78, 255) 1px groove;
-    margin-top: 10px;
-    border-radius: 20px;
-    width: 40%;
-}
+/*#ButtonTrailingStop {*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+    /*margin-top: 10px;*/
+    /*border-radius: 20px;*/
+    /*width: 40%;*/
+/*}*/
 
-#mainDashboardContainer {
-    margin-top: 50px;
-    background-color: rgba(0, 0, 0, 0.85);
-    padding-bottom: 2%;
-    border: white 1px groove;
-    border-radius: 10px;
-    color: white;
-}
+/*#mainDashboardContainer {*/
+    /*margin-top: 50px;*/
+    /*background-color: rgba(0, 0, 0, 0.85);*/
+    /*padding-bottom: 2%;*/
+    /*border: white 1px groove;*/
+    /*border-radius: 10px;*/
+    /*color: white;*/
+/*}*/
 
-#mainDashboardContainerElements {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
+/*#mainDashboardContainerElements {*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto*/
+/*}*/
 
-#dashboard {
-    color: white;
-}
+/*#dashboard {*/
+    /*color: white;*/
+/*}*/
 
-#dashboard:hover {
-    color: rgba(255, 255, 255, 0.534);
-}
+/*#dashboard:hover {*/
+    /*color: rgba(255, 255, 255, 0.534);*/
+/*}*/
 
-#positions {
-    background-color: black;
-    color: white;
-    width: 100%;
-    table-layout: fixed;
-}
+/*#positions {*/
+    /*background-color: black;*/
+    /*color: white;*/
+    /*width: 100%;*/
+    /*table-layout: fixed;*/
+/*}*/
 
-#positions th {
-    text-align: center;
-    border: 1px groove rgb(153, 13, 255);
-}
+/*#positions th {*/
+    /*text-align: center;*/
+    /*border: 1px groove rgb(153, 13, 255);*/
+/*}*/
 
-#positions td {
-    border-radius: 30px;
-    text-align: center;
-    border: rgb(153, 13, 255)1px groove;
-}
+/*#positions td {*/
+    /*border-radius: 30px;*/
+    /*text-align: center;*/
+    /*border: rgb(153, 13, 255)1px groove;*/
+/*}*/
 
-#positions tr:hover {
-    background-color: rgb(32, 30, 30);
-}
+/*#positions tr:hover {*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
 
-#order {
-    color: white;
-    background-color: black;
-    width: 100%;
-    table-layout: fixed;
-}
+/*#order {*/
+    /*color: white;*/
+    /*background-color: black;*/
+    /*width: 100%;*/
+    /*table-layout: fixed;*/
+/*}*/
 
-#order th {
-    text-align: center;
-    border: rgb(234, 9, 255) 1px groove;
-}
+/*#order th {*/
+    /*text-align: center;*/
+    /*border: rgb(234, 9, 255) 1px groove;*/
+/*}*/
 
-#order td {
-    text-align: center;
-    border: rgb(234, 9, 255) 1px groove;
-}
+/*#order td {*/
+    /*text-align: center;*/
+    /*border: rgb(234, 9, 255) 1px groove;*/
+/*}*/
 
-#order tr:hover {
-    background-color: rgb(32, 30, 30);
-}
+/*#order tr:hover {*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
 
-#ordersHeader {
-    font-size: medium;
-    color: rgb(234, 9, 255);
-}
+/*#ordersHeader {*/
+    /*font-size: medium;*/
+    /*color: rgb(234, 9, 255);*/
+/*}*/
 
-#stop {
-    background-color: black;
-    color: white;
-    width: 100%;
-    table-layout: fixed;
-}
+/*#stop {*/
+    /*background-color: black;*/
+    /*color: white;*/
+    /*width: 100%;*/
+    /*table-layout: fixed;*/
+/*}*/
 
-#stop th {
-    text-align: center;
-    border: 1px groove rgb(0, 252, 237);
-}
+/*#stop th {*/
+    /*text-align: center;*/
+    /*border: 1px groove rgb(0, 252, 237);*/
+/*}*/
 
-#stop td {
-    text-align: center;
-    border: 1px groove rgb(0, 252, 237);
-}
+/*#stop td {*/
+    /*text-align: center;*/
+    /*border: 1px groove rgb(0, 252, 237);*/
+/*}*/
 
-#waitingTrailingStopHeader {
-    font-size: medium;
-    color: rgb(99, 78, 255);
-}
+/*#waitingTrailingStopHeader {*/
+    /*font-size: medium;*/
+    /*color: rgb(99, 78, 255);*/
+/*}*/
 
-#waitingTrailingStop {
-    background-color: black;
-    color: white;
-    width: 100%;
-    table-layout: fixed;
-}
+/*#waitingTrailingStop {*/
+    /*background-color: black;*/
+    /*color: white;*/
+    /*width: 100%;*/
+    /*table-layout: fixed;*/
+/*}*/
 
-#waitingTrailingStop td {
-    text-align: center;
-    border: rgb(99, 78, 255) 1px groove;
-}
+/*#waitingTrailingStop td {*/
+    /*text-align: center;*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+/*}*/
 
-#waitingTrailingStop tr:hover {
-    background-color: rgb(32, 30, 30);
-}
+/*#waitingTrailingStop tr:hover {*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
 
-#waitingTrailingStop th {
-    text-align: center;
-    border: rgb(99, 78, 255) 1px groove;
-}
+/*#waitingTrailingStop th {*/
+    /*text-align: center;*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+/*}*/
 
-#trailingStop {
-    border: rgb(99, 78, 255) 1px groove;
-}
+/*#trailingStop {*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+/*}*/
 
-#headTableWTS {
-    border-radius: 20px;
-}
+/*#headTableWTS {*/
+    /*border-radius: 20px;*/
+/*}*/
 
-#trailingStopText {
-    color: rgb(99, 78, 255);
-}
+/*#trailingStopText {*/
+    /*color: rgb(99, 78, 255);*/
+/*}*/
 
-#trailingStopText:hover {
-    color: rgb(255, 102, 0);
-}
+/*#trailingStopText:hover {*/
+    /*color: rgb(255, 102, 0);*/
+/*}*/
 
-#trailingStopSubmit {
-    background-color: black;
-    color: rgb(99, 78, 255);
-    border: rgb(99, 78, 255) 1px groove;
-}
+/*#trailingStopSubmit {*/
+    /*background-color: black;*/
+    /*color: rgb(99, 78, 255);*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+/*}*/
 
-#stop tr:hover {
-    background-color: rgb(32, 30, 30);
-}
+/*#stop tr:hover {*/
+    /*background-color: rgb(32, 30, 30);*/
+/*}*/
 
-#stopHeader {
-    font-size: medium;
-    color: rgb(0, 252, 237);
-}
+/*#stopHeader {*/
+    /*font-size: medium;*/
+    /*color: rgb(0, 252, 237);*/
+/*}*/
 
-#positionHeader {
-    font-size: medium;
-    color: rgb(153, 13, 255);
-}
+/*#positionHeader {*/
+    /*font-size: medium;*/
+    /*color: rgb(153, 13, 255);*/
+/*}*/
 
 
-#trailingStopDivs {
-    border: rgb(99, 78, 255) 1px groove;
-    border-radius: 40px;
-    margin-left: 80px;
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 4%;
-}
+/*#trailingStopDivs {*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+    /*border-radius: 40px;*/
+    /*margin-left: 80px;*/
+    /*background-color: rgba(0, 0, 0, 0.75);*/
+    /*padding: 4%;*/
+/*}*/
 
-#trailingStopTextSet {
-    color: rgb(99, 78, 255);
-    font-size: 30px;
-}
+/*#trailingStopTextSet {*/
+    /*color: rgb(99, 78, 255);*/
+    /*font-size: 30px;*/
+/*}*/
 
-#trailingStopSet {
-    background-color: black;
-    border-radius: 10px;
-    color: rgb(99, 78, 255);
-    border: rgb(99, 78, 255) 1px groove;
-}
+/*#trailingStopSet {*/
+    /*background-color: black;*/
+    /*border-radius: 10px;*/
+    /*color: rgb(99, 78, 255);*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+/*}*/
 
-#trailingStopSetSubmit {
-    border: rgb(99, 78, 255) 1px groove;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
-}
+/*#trailingStopSetSubmit {*/
+    /*border: rgb(99, 78, 255) 1px groove;*/
+    /*border-radius: 20px;*/
+    /*color: white;*/
+    /*background-color: black;*/
+/*}*/
 
-#trailingStopSetSubmit:hover {
-    background-color: rgb(12, 11, 11);
-}
+/*#trailingStopSetSubmit:hover {*/
+    /*background-color: rgb(12, 11, 11);*/
+/*}*/
 
 

@@ -1,4 +1,4 @@
-.user-dashboard {
+.account-dashboard {
     margin-top: 50px;
     padding: 50px;
     position: relative;
@@ -116,9 +116,9 @@
 }
 
 .Modal {
-    position: absolute;
     backdrop-filter: blur(15px);
-    border-radius: 20px;
+    border: white 1px groove;
+    position: absolute;
     top: 10%;
     left: 5%;
     right: 5%;

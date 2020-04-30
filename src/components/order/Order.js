@@ -4,8 +4,8 @@ class Order extends Component {
   render() {
     const { order } = this.props;
     return (
-      <div className="container">
-        <table id="order" class="table-sm">
+      <div>
+        <table>
           <thead>
             <tr>
               <td>{order.symbol}</td>
