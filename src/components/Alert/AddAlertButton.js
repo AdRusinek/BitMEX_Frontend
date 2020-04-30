@@ -35,14 +35,14 @@ export class AddAlertButton extends Component {
 
     render() {
         return (
-            <div id="createAlertButton">
+            <div className="add-alert-content">
                 <React.Fragment>
                     <button
                         type="button"
-                        className="btn btn-outline-primary mb-3 text-left"
+                        className="alert-modal-button"
                         onClick={this.handleOpenModal}
                     >
-                        <i className="far fa-plus-square"/> Add Alert
+                        <i className="fa fa-bell-o"/> Add Alert
                     </button>
                     <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} style={customStyles}
                            ariaHideApp={false}>

@@ -33,17 +33,16 @@ export class AddAccountButton extends Component {
         this.setState({showModal: false});
     }
 
-
     render() {
         return (
-            <div id="createCredentialsButton">
+            <div className="add-account-content">
                 <React.Fragment>
                     <button
                         type="button"
-                        className="btn btn-outline-primary mb-3 text-left"
+                        className="account-modal-button"
                         onClick={this.handleOpenModal}
                     >
-                        <i className="far fa-plus-square"/> Add Account
+                        <i className="fa fa-address-card-o"/> Add Account
                     </button>
                     <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} style={customStyles}
                            ariaHideApp={false}>

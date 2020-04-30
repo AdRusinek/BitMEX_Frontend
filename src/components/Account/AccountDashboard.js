@@ -3,9 +3,9 @@ import {getAccounts} from "../../actions/accountActions";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import Account from "./Account";
-import CreateAccountButton from "./AddAccountButton"
+import AddAccountButton from "./AddAccountButton"
 import {Link} from "react-router-dom";
-import SetAlertButton from "../Alert/AddAlertButton";
+import AddAlertButton from "../Alert/AddAlertButton";
 import Alert from "../Alert/Alert";
 import {getAlerts} from "../../actions/alertActions";
 import ShowFilesButton from "../files/ShowFilesButton";
@@ -24,9 +24,9 @@ class AccountDashboard extends Component {
             <div className="container user-dashboard">
                 <div className="row">
                     <div className="col-sm-6 accounts">
-                        <CreateAccountButton/>
+                        <AddAccountButton/>
                         {accounts.map(account => (
-                            <Link className="nav-link" to={`/dashboard/${account.id}`}>
+                            <Link id="account-link" to={`/dashboard/${account.id}`}>
                                 <Account
                                     key={account.id}
                                     account={account}
@@ -34,8 +34,8 @@ class AccountDashboard extends Component {
                             </Link>
                         ))}
                     </div>
-                    <div id="alerts" className="col-sm-6 alerts">
-                        <SetAlertButton/>
+                    <div className="col-sm-6 alerts">
+                        <AddAlertButton/>
                         {customAlerts.map(customAlert => (
                             <Alert
                                 key={customAlert.id}
@@ -45,7 +45,7 @@ class AccountDashboard extends Component {
                     </div>
                 </div>
                 <div className="guides">
-                    <ShowFilesButton/>
+                <ShowFilesButton/>
                 </div>
             </div>
         );
@@ -64,4 +64,4 @@ const mapStateToProps = state => ({
     customAlert: state.customAlert
 });
 
-export default connect(mapStateToProps, {getAccounts: getAccounts, getAlerts})(AccountDashboard);
+export default connect(mapStateToProps, {getAccounts, getAlerts})(AccountDashboard);
