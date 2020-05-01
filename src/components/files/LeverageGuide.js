@@ -10,7 +10,7 @@ class LeverageGuide extends Component {
                 <TutorialTable/>
                 <div>
                     <br/>
-                    <div id="box-content">
+                    <div className="box-content">
                         <br/>
                         <img id="leverageAndSMImagesId" src={require('./guidesImages/leverage1.jpg')}/>
                         <p>Wskaźnik LEVERAGE przy dźwigni cross jako wyznacznik wielkości zleceń</p>

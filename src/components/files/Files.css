@@ -1,61 +1,59 @@
+.tutorial-table {
+    text-align: center;
+    color: black;
+}
+
+.tutorial-table button {
+    width: 20%;
+    background: rgba(255, 255, 255, 0.73);
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.tutorial-table button:hover {
+    background: #949494;
+}
+
+.tutorial-table text {
+    color: #111111;
+}
+
+.tutorial-table:Link {
+    text-decoration: none;
+}
+
 #imagesId {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
-    height: 55%;
+    width: 75%;
+    height: 75%;
 }
 
 #leverageAndSMImagesId{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    height: 45%;
+    width: 40%;
+    height: 55%;
 }
 
 
-#box-content{
-    overflow: auto;
-    font-family: Arial, Helvetica, sans-serif;
+.box-content{
     margin-left: 15%;
     margin-right: 15%;
-    font-size: 17px;
-    border: rgb(49, 220, 252) 2px groove;
-    background-color: rgba(0, 0, 0, 0.84);
+    border: white 1px groove;
+    backdrop-filter: blur(60px);
     height: 35vw;
     overflow-y: scroll;
-    border-radius: 30px;
-
 }
 
-#box-content p {
+.box-content p {
     margin: auto;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    width: 600px; /* change to your preferences */
+    font-size: 14px;
+    width: 700px; /* change to your preferences */
     text-align: center;
 }
 
-#tutorialTable {
-    margin-top: 30px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.83);
-    border: rgb(49, 220, 252) 1px groove;
-}
-
-#tutorialTable td:hover {
-    background-color: rgba(45, 43, 41, 0.74);
-}
-
-#tutorialTable td {
-    padding-top: 10px;
-    text-align: center;
-    border:rgb(49, 220, 252) 1px groove;
-}
-
-#tutorialTable p {
-    color: white;
-    font-size: 20px;
-}

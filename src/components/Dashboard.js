@@ -15,7 +15,6 @@ import WaitingTrailingStopHeadTable from "./WaitingTrailingStop/WaitingTrailingS
 import WaitingTrailingStop from "./WaitingTrailingStop/WaitingTrailingStop";
 import AddWaitingTrailingStopButton from "./WaitingTrailingStop/AddWaitingTrailingStopButton";
 import {css} from "./UserDashboard.css";
-import ExchangeTable from "./ExchangeTable";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -34,19 +33,25 @@ class Dashboard extends Component {
         const {waitingTrailingStops} = this.props.waitingTrailingStop;
 
         return (
-            <div className="container user-dashboard">
-                <div className="col-sm-6">
-                    <WaitingTrailingStopHeadTable/>
-                    {waitingTrailingStops.map(waitingTrailingStop => (
-                        <WaitingTrailingStop
-                            key={waitingTrailingStop.id}
-                            waitingTrailingStop={waitingTrailingStop}
-                        />
-                    ))}
+            <div className="user-dashboard container">
+                <div className="col-sm-12">
+                    <AddWaitingTrailingStopButton accountId={id}/>
+                    <div className="user-dashboard-element">
+                        <WaitingTrailingStopHeadTable/>
+                        {waitingTrailingStops.map(waitingTrailingStop => (
+                            <WaitingTrailingStop
+                                key={waitingTrailingStop.id}
+                                waitingTrailingStop={waitingTrailingStop}
+                            />
+                        ))}
+                    </div>
+                    <div className="user-dashboard-element">
                     <StopHeadTable/>
                     {stops.map(stop => (
                         <Stop key={stop.orderID} stop={stop}/>
                     ))}
+                    </div>
+                    <div className="user-dashboard-element">
                     <PositionHeadTable/>
                     {positions.map(position => (
                         <Position
@@ -54,13 +59,14 @@ class Dashboard extends Component {
                             position={position}
                         />
                     ))}
+                    </div>
+                    <div className="user-dashboard-element">
                     <OrderHeadTable/>
                     {orders.map(order => (
                         <Order key={order.orderID} order={order}/>
                     ))}
+                    </div>
                 </div>
-                <AddWaitingTrailingStopButton accountId={id}/>
-                <ExchangeTable/>
             </div>
         );
     }

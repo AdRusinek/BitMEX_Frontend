@@ -7,7 +7,6 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./store";
 import Trailing from "./components/WaitingTrailingStop/AddWaitingTrailingStop";
-import Landing from "./components/Layout/Landing";
 import Register from "./components/UserMenagement/Register";
 import Login from "./components/UserMenagement/Login";
 import jwt_decode from "jwt-decode";
@@ -19,7 +18,7 @@ import AccountDashboard from "./components/Account/AccountDashboard";
 import LeverageGuide from "./components/files/LeverageGuide";
 import StopMarket from "./components/files/StopMarket";
 import TutorialTable from "./components/files/TutorialTable";
-import BitmexStepByStep from "./components/files/BitmexStepByStep";
+import ExchangeStepByStep from "./components/files/ExchangeStepByStep";
 
 const jwtToken = localStorage.jwtToken;
 
@@ -57,7 +56,7 @@ class App extends Component {
                             <SecuredRoute exact path="/accounts" component={AccountDashboard}/>
                             <SecuredRoute exact path="/accounts/:id" component={AccountDashboard}/>
                             <SecuredRoute exact path="/tutorialTable" component={TutorialTable}/>
-                            <SecuredRoute exact path="/bitmexStepByStep" component={BitmexStepByStep}/>
+                            <SecuredRoute exact path="/exchangeStepByStep" component={ExchangeStepByStep}/>
                             <SecuredRoute exact path="/leverage" component={LeverageGuide}/>
                             <SecuredRoute exact path="/stopMarket" component={StopMarket}/>
                             <SecuredRoute exact path="/trailing/:id" component={Trailing}/>

@@ -1,9 +1,10 @@
 import React, {Component} from "react";
+import {css} from "../UserDashboard.css";
 
 class OrderHeadTable extends Component {
     render() {
         return (
-            <div>
+            <div className="order-table-header">
                 <text>
                     Your active orders
                 </text>

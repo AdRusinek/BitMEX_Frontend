@@ -1,7 +1,167 @@
 .user-dashboard {
-    background: purple;
+    font-family: arial;
+    /*background: purple;*/
+    font-size: 15px;
 }
 
-.exchange-list {
-    background: yellow;
+.user-dashboard-element {
+    padding: 5px;
+}
+
+#negativePrice {
+    background: red;
+    padding: 1px;
+    width: 5px;
+    height: 85%;
+    position: absolute;
+}
+
+#positivePrice {
+    background: #00cf00;
+    padding: 1px;
+    width: 5px;
+    height: 85%;
+    position: absolute;
+}
+
+/** TRAILING **/
+.trailing-table-header {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.trailing-table-header th {
+    border: 1px solid #ddd;
+}
+
+.trailing-table-header table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.trailing-table {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.trailing-table td {
+    border: 1px solid #ddd;
+    table-layout: fixed;
+}
+
+.trailing-table table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.trailing-modal-button {
+    background: rgba(255, 255, 255, 0.73);
+    border: 2px #111111;
+    border-radius: 5px;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.trailing-modal-button:hover {
+    background: #949494;
+}
+
+/** TRAILING **/
+
+/** STOPS **/
+.stop-table-header {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.stop-table-header th {
+    border: 1px solid #ddd;
+}
+
+.stop-table-header table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.stop-table {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.stop-table td {
+    border: 1px solid #ddd;
+    table-layout: fixed;
+}
+
+.stop-table table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/** STOPS **/
+
+/** POSITION **/
+.position-table-header {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.position-table-header th {
+    border: 1px solid #ddd;
+}
+
+.position-table-header table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.position-table {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.position-table td {
+    border: 1px solid #ddd;
+    table-layout: fixed;
+}
+
+.position-table table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/** POSITION **/
+
+/** ORDER **/
+.order-table-header {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.order-table-header th {
+    border: 1px solid #ddd;
+}
+
+.order-table-header table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.order-table {
+    backdrop-filter: blur(60px);
+    text-align: center;
+}
+
+.order-table td {
+    border: 1px solid #ddd;
+    table-layout: fixed;
+}
+
+.order-table table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.add-trailing-content {
 }

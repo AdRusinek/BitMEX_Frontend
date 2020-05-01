@@ -9,7 +9,7 @@ class StopMarket extends Component {
                 <TutorialTable/>
                 <div>
                     <br/>
-                    <div id="box-content">
+                    <div className="box-content">
                         <br/>
                         <p>Zabezpieczanie pozycji przy pomocy STOP MARKET</p>
                         <p>Dzięki opcji stop market możemy ustawić moment w kt&oacute;rym nie chcemy ryzykować większą

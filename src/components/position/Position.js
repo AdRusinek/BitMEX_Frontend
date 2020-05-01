@@ -3,12 +3,21 @@ import React, {Component} from "react";
 class Position extends Component {
     render() {
         const {position} = this.props;
+
+        let priceColor;
+
+        if (position.currentQty >= 0) {
+            priceColor="positivePrice";
+        } else {
+            priceColor="negativePrice"
+        }
+
         return (
-            <div>
+            <div className="position-table">
                 <table>
                     <thead>
                     <tr>
-                        <td>{position.symbol}</td>
+                        <td><div id={priceColor}/>{position.symbol}</td>
                         <td>{position.currentQty}</td>
                         <td>{position.avgEntryPrice}</td>
                         <td>{position.markPrice}</td>

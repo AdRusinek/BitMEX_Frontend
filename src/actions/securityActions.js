@@ -7,7 +7,7 @@ export const createNewUser = (newUser, history) => async dispatch => {
     try {
         await axios.post("/api/users/register", newUser);
         history.push({
-            pathname: "/login",
+            pathname: "/",
             search: '?query=abc',
             state: {
                 detail: "Confirm your account by clicking link in your email."

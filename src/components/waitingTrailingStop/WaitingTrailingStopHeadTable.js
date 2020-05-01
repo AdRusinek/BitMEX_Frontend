@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import {css} from "../UserDashboard.css"
 
 class WaitingTrailingStopHeadTable extends Component {
   render() {
     return (
-      <div>
+      <div className="trailing-table-header">
         <text>
-          Trailing stops waiting for trigger
+          Waiting Trailing Stops
         </text>
         <table>
           <thead>

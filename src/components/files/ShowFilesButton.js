@@ -4,14 +4,15 @@ import {Link} from "react-router-dom";
 const ShowFilesButton = () => {
     return (
         <div className="guide-display">
-            <button>
-                <React.Fragment>
-                    <Link id="guide-link" to="/tutorialTable">
+
+            <React.Fragment>
+                <Link id="guide-link" to="/exchangeStepByStep">
+                    <button>
                         <i className="fa fa-book"/>
-                        <text>Show Guides</text>
-                    </Link>
-                </React.Fragment>
-            </button>
+                        <text> Show Guides</text>
+                    </button>
+                </Link>
+            </React.Fragment>
         </div>
     );
 };

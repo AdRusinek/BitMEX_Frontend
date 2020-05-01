@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import {css} from "./Files.css";
 import TutorialTable from "./TutorialTable";
 
-class BitmexStepByStep extends Component {
+class ExchangeStepByStep extends Component {
     render() {
         return (
             <div>
                 <TutorialTable/>
                 <div >
                     <br/>
-                    <div id="box-content">
+                    <div className="box-content">
                         <p>1 Ustawianie wartości dźwigni finansowej oraz ich właściowści</p>
                         <img id="imagesId" src={require('./guidesImages/krokPoKroku1.jpg')}/>
                         <p>W pierwszej kolejności podczas otwierania pozycji należy wybrać dźwginie w zakresie od 1-100
@@ -77,4 +77,4 @@ class BitmexStepByStep extends Component {
 
 }
 
-export default BitmexStepByStep;
+export default ExchangeStepByStep;

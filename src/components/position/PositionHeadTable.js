@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import {css} from "../UserDashboard.css"
 
 class PositionHeadTable extends Component {
   render() {
     return (
-      <div>
+      <div className="position-table-header">
         <text>
           Your active position
         </text>

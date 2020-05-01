@@ -1,9 +1,10 @@
 import React, {Component} from "react";
+import {css} from "../UserDashboard.css";
 
 class StopHeadTable extends Component {
     render() {
         return (
-            <div>
+            <div className="stop-table-header">
                 <text>
                     Your active stops
                 </text>

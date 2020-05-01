@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Modal from "react-modal";
-import {css} from "../Account/AccountStyles.css";
+import {css} from "../UserDashboard.css"
 import {connect} from "react-redux";
 import {closeModalClearState} from "../../actions/commonActions";
 import PropTypes from "prop-types";
@@ -28,14 +28,14 @@ export class AddWaitingTrailingStopButton extends Component {
 
     render() {
         return (
-            <div>
+            <div className="add-trailing-content">
                 <React.Fragment>
                     <button
                         type="button"
-                        className=""
+                        className="trailing-modal-button"
                         onClick={this.handleOpenModal}
                     >
-                        <i className="far fa-plus-square"/> Add Trailing Stop
+                        <i className="fa fa-line-chart"/> Add Trailing Stop
                     </button>
                     <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal}
                            className="Modal" overlayClassName="Overlay" ariaHideApp={false}>
