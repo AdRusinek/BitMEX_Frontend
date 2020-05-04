@@ -3,7 +3,7 @@ body {
     color: white;
 }
 
-.login-register{
+.login-register {
     height: 400px;
     width: 320px;
     position: relative;
@@ -17,7 +17,8 @@ body {
 }
 
 .logo > i {
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 2px;
 }
 
 h2 {
@@ -26,7 +27,7 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-bottom: 2px solid #e5e5e5;
 }
 
@@ -59,6 +60,7 @@ p, a, input, label {
 .login-register-btn {
     background: white;
     display: inline-block;
+    margin-top: 10px;
     padding: 5px 100px;
     border-radius: 30px;
     border: #111111;
@@ -73,3 +75,4 @@ p, a, input, label {
 .clear {
     clear: both;
 }
+

@@ -15,7 +15,6 @@ class OrderHeadTable extends Component {
                         <th>Quantity</th>
                         <th>Order Price</th>
                         <th>Remaining</th>
-                        <th>Type</th>
                     </tr>
                     </thead>
                 </table>

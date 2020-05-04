@@ -46,7 +46,7 @@ export class AddAlertButton extends Component {
                             onClick={this.handleCloseModal}
                         >
                             <div className="logo">
-                                <i className="fa fa-window-close-o"/>
+                                <i className="fa fa-window-close"/>
                             </div>
                         </button>
                         <AddAlert closeModal={this.handleCloseModal}/>

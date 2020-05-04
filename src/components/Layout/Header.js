@@ -38,12 +38,12 @@ class Header extends Component {
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link id="landingActions" className="nav-link" to="/register">
+                        <Link id="headerText" className="nav-link" to="/register">
                             Sign Up
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link id="landingActions" className="nav-link" to="/">
+                        <Link id="headerText" className="nav-link" to="/">
                             Login
                         </Link>
                     </li>

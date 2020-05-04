@@ -17,15 +17,17 @@
 .account-display {
     padding: 8px;
     margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
+    background: #111111;
     border: 2px groove rgb(255, 255, 255);
     color: white;
 }
 
 .account-display:hover {
-    backdrop-filter: blur(40px);
+    background: #333333;
 }
 
 .add-account-content {
@@ -53,9 +55,10 @@
 .alert-display {
     padding: 8px;
     margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
     text-align: center;
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
+    background: #111111;
     border: 2px groove rgb(255, 255, 255);
     color: white;
 }
@@ -117,6 +120,7 @@
 
 .Modal {
     backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.82);
     border: white 1px groove;
     position: absolute;
     top: 10%;
@@ -138,6 +142,7 @@
 }
 
 .register-btn-modal {
+    margin-top: 15px;
     color: black;
     background: white;
     border: none;
@@ -160,4 +165,12 @@
 
 ::placeholder {
     color: white;
+}
+
+.trigger-radio{
+    background: red;
+}
+
+.execInst-options{
+    background: blue;
 }

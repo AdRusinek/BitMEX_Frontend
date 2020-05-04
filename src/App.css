@@ -4,9 +4,13 @@ img {
 
 body {
     font-family: arial;
-    background-image: url("https://wallpapertag.com/wallpaper/full/f/c/9/500440-beautiful-black-and-blue-abstract-wallpaper-1920x1080.jpg");
+    background-image: url("https://hdqwalls.com/download/mkbhd-logo-black-background-5k-jf-1920x1080.jpg");
     background-size: 100%;
 }
 
 *:focus {outline:none}
 
+.invalid-input {
+    font-size: 12px;
+    color: #e11200;
+}

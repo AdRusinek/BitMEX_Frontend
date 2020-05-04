@@ -82,12 +82,12 @@ class AddAlert extends Component {
                                         value={this.state.alertTriggeringPrice}
                                         onChange={this.onChange}
                                     />
-                                    {errors.alertTriggeringPrice && (
-                                        <div className="invalid-feedback">
-                                            {errors.alertTriggeringPrice}
-                                        </div>
-                                    )}
                                 </div>
+                                {errors.alertTriggeringPrice && (
+                                    <div className="invalid-input">
+                                        {errors.alertTriggeringPrice}
+                                    </div>
+                                )}
                                 <div className="form-group">
                                     <input
                                         id="alertSet"
@@ -95,17 +95,17 @@ class AddAlert extends Component {
                                         className={classnames("", {
                                             "is-invalid": errors.alertMessage
                                         })}
-                                        placeholder="Your alert message"
+                                        placeholder="Your alert message (Optional)"
                                         name="alertMessage"
                                         value={this.state.alertMessage}
                                         onChange={this.onChange}
                                     />
-                                    {errors.alertMessage && (
-                                        <div className="invalid-feedback">
-                                            {errors.alertMessage}
-                                        </div>
-                                    )}
                                 </div>
+                                {errors.alertMessage && (
+                                    <div className="invalid-input">
+                                        {errors.alertMessage}
+                                    </div>
+                                )}
                                 <div className="btn-group-modal">
                                     <button
                                         type="submit"

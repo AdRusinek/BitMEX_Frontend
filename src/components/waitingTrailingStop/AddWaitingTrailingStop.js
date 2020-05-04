@@ -6,12 +6,14 @@ import classnames from "classnames";
 import {css} from "../Account/AccountStyles.css";
 
 
-class AddWaitingTrailingStop extends Component {
+export class AddWaitingTrailingStop extends Component {
 
     state = {
         startingPrice: "",
         quantity: "",
         trialValue: "",
+        execInst: "MarkPrice",
+        closeOnTrigger: 0,
         errors: {}
     };
 
@@ -22,18 +24,23 @@ class AddWaitingTrailingStop extends Component {
     }
 
     onChange = e => {
-        this.setState({[e.target.name]: e.target.value});
-        // const {id} = this.props.match.params;
+        const {name, value, type, checked} = e.target;
+        type === "checkbox" ? this.setState({[name]: checked}) :
+            this.setState({
+                [name]: value
+            })
     };
 
     onSubmit = e => {
         e.preventDefault();
-        const {startingPrice, quantity, trialValue} = this.state;
+        const {startingPrice, quantity, trialValue, execInst, closeOnTrigger} = this.state;
         const currentAccountId = this.props.paramsAccountId;
         const newTrailing = {
             startingPrice,
             quantity,
-            trialValue
+            trialValue,
+            execInst,
+            closeOnTrigger
         };
         this.props.postTrailingStop(newTrailing, this.props.closeModal, currentAccountId);
     };
@@ -55,9 +62,29 @@ class AddWaitingTrailingStop extends Component {
                         Set Trailing Stop
                     </p>
                     <form onSubmit={this.onSubmit}>
+                        <div className="execInst-options">
+                            <select
+                                className="execInst-select"
+                                value={this.state.execInst}
+                                onChange={this.onChange}
+                                name="execInst"
+                            >
+                                <option value="MarkPrice">Mark</option>
+                                <option value="LastPrice">Last</option>
+                                <option value="IndexPrice">Index</option>
+                            </select>
+                            <text>Close on Trigger</text>
+                            <input
+                                type="checkbox"
+                                className="trigger-input"
+                                value={this.state.closeOnTrigger}
+                                onChange={this.onChange}
+                                name="closeOnTrigger"
+                            />
+                        </div>
                         <div className="form-group-modal">
                             <input
-                                type="text"
+                                type="number"
                                 className={classnames("", {
                                     "is-invalid": errors.startingPrice
                                 })}
@@ -66,12 +93,12 @@ class AddWaitingTrailingStop extends Component {
                                 value={this.state.startingPrice}
                                 onChange={this.onChange}
                             />
-                            {errors.startingPrice && (
-                                <div className="invalid-feedback">
-                                    {errors.startingPrice}
-                                </div>
-                            )}
                         </div>
+                        {errors.startingPrice && (
+                            <div className="invalid-input">
+                                {errors.startingPrice}
+                            </div>
+                        )}
                         <div className="form-group-modal">
                             <input
                                 type="number"
@@ -83,10 +110,10 @@ class AddWaitingTrailingStop extends Component {
                                 value={this.state.quantity}
                                 onChange={this.onChange}
                             />
-                            {errors.quantity && (
-                                <div className="invalid-feedback">{errors.quantity}</div>
-                            )}
                         </div>
+                        {errors.quantity && (
+                            <div className="invalid-input">{errors.quantity}</div>
+                        )}
                         <div className="form-group-modal">
                             <input
                                 type="number"
@@ -98,10 +125,10 @@ class AddWaitingTrailingStop extends Component {
                                 value={this.state.trialValue}
                                 onChange={this.onChange}
                             />
-                            {errors.trialValue && (
-                                <div className="invalid-feedback">{errors.trialValue}</div>
-                            )}
                         </div>
+                        {errors.trialValue && (
+                            <div className="invalid-input">{errors.trialValue}</div>
+                        )}
                         <div className="btn-group-modal">
                             <button
                                 type="submit"

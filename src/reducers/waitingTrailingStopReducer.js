@@ -15,7 +15,7 @@ export default function(state = initialState, action) {
     case POST_TRAILING_STOP:
       return {
         ...state,
-        waitingTrailingStop: [action.payload, ...state.waitingTrailingStops]
+        waitingTrailingStops: [action.payload, ...state.waitingTrailingStops]
       };
     default:
       return state;

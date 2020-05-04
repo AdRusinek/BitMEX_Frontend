@@ -1,6 +1,6 @@
 import {CLEAR_CAPABILITY_CLOSE_MODAL, GET_ERRORS} from "./types";
 
-const clearErrors = () => ({
+export const clearErrors = () => ({
     type: GET_ERRORS,
     payload: {}
 });

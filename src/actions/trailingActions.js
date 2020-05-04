@@ -1,5 +1,6 @@
 import axios from "axios";
 import {POST_TRAILING_STOP, GET_ERRORS, GET_WAITING_TRAILING_STOPS} from "./types";
+import  {clearErrors} from "../actions/commonActions";
 
 export const getWaitingTrailingStops = (id) => async dispatch => {
   const res = await axios.get(`/api/trailing-stops/get-waiting-trailing-stops/${id}`);
@@ -17,6 +18,7 @@ export const postTrailingStop = (trailing, closeModal, id) => async dispatch => 
       type: POST_TRAILING_STOP,
       payload: res.data
     });
+    dispatch(clearErrors());
   } catch (err) {
     dispatch({
       type: GET_ERRORS,

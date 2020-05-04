@@ -15,7 +15,6 @@ class StopHeadTable extends Component {
                         <th>Quantity</th>
                         <th>Stop Price</th>
                         <th>Remaining</th>
-                        <th>Type</th>
                     </tr>
                     </thead>
                 </table>

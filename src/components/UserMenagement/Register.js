@@ -71,10 +71,10 @@ class Register extends Component {
                     value={this.state.fullName}
                     onChange={this.onChange}
                   />
-                  {errors.fullName && (
-                    <div className="invalid-feedback">{errors.fullName}</div>
-                  )}
                 </div>
+                {errors.fullName && (
+                    <div className="invalid-input">{errors.fullName}</div>
+                )}
                 <div className="form-group">
                   <label title="Username" htmlFor="username">
                     <i className="fa fa-user"/>
@@ -89,10 +89,10 @@ class Register extends Component {
                     value={this.state.username}
                     onChange={this.onChange}
                   />
-                  {errors.username && (
-                    <div className="invalid-feedback">{errors.username}</div>
-                  )}
                 </div>
+                {errors.username && (
+                    <div className="invalid-input">{errors.username}</div>
+                )}
                 <div className="form-group">
                   <label title="Password" htmlFor="password">
                     <i className="fa fa-key"/>
@@ -107,10 +107,10 @@ class Register extends Component {
                     value={this.state.password}
                     onChange={this.onChange}
                   />
-                  {errors.password && (
-                    <div className="invalid-feedback">{errors.password}</div>
-                  )}
                 </div>
+                {errors.password && (
+                    <div className="invalid-input">{errors.password}</div>
+                )}
                 <div className="form-group">
                   <label title="Password" htmlFor="password">
                     <i className="fa fa-key"/>
@@ -125,12 +125,12 @@ class Register extends Component {
                     value={this.state.confirmPassword}
                     onChange={this.onChange}
                   />
-                  {errors.confirmPassword && (
-                    <div className="invalid-feedback">
+                </div>
+                {errors.confirmPassword && (
+                    <div className="invalid-input">
                       {errors.confirmPassword}
                     </div>
-                  )}
-                </div>
+                )}
                 <div className="btn-group">
                   <button
                       type="submit"

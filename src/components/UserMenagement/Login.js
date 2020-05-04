@@ -76,7 +76,7 @@ class Login extends Component {
                                 </label>
                                 <input
                                     type="text"
-                                    className={classnames("", {
+                                    className={classnames({
                                         "is-invalid": errors.username
                                     })}
                                     placeholder="Email Address"
@@ -84,18 +84,18 @@ class Login extends Component {
                                     value={this.state.username}
                                     onChange={this.onChange}
                                 />
-                                {errors.username && (
-                                    <div className="invalid-feedback">{errors.username}</div>
-                                )}
                                 <div className="clear"/>
                             </div>
+                            {errors.username && (
+                                <div className="invalid-input">{errors.username}</div>
+                            )}
                             <div className="form-group">
                                 <label title="Password" htmlFor="password">
                                     <i className="fa fa-key"/>
                                 </label>
                                 <input
                                     type="password"
-                                    className={classnames("", {
+                                    className={classnames({
                                         "is-invalid": errors.password
                                     })}
                                     placeholder="Password"
@@ -103,10 +103,11 @@ class Login extends Component {
                                     value={this.state.password}
                                     onChange={this.onChange}
                                 />
-                                {errors.password && (
-                                    <div className="invalid-feedback">{errors.password}</div>
-                                )}
+                                <div className="clear"/>
                             </div>
+                            {errors.password && (
+                                <div className="invalid-input">{errors.password}</div>
+                            )}
                             <div className="btn-group">
                                 <button
                                     type="submit"

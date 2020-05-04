@@ -64,12 +64,12 @@ class AddAccount extends Component {
                                 value={this.state.accountName}
                                 onChange={this.onChange}
                             />
-                            {errors.accountName && (
-                                <div className="invalid-feedback">
-                                    {errors.accountName}
-                                </div>
-                            )}
                         </div>
+                        {errors.accountName && (
+                            <div className="invalid-input">
+                                {errors.accountName}
+                            </div>
+                        )}
                         <div className="form-group-modal">
                             <input
                                 type="text"
@@ -81,10 +81,10 @@ class AddAccount extends Component {
                                 value={this.state.apiKey}
                                 onChange={this.onChange}
                             />
-                            {errors.apiKey && (
-                                <div className="invalid-feedback">{errors.apiKey}</div>
-                            )}
                         </div>
+                        {errors.apiKey && (
+                            <div className="invalid-input">{errors.apiKey}</div>
+                        )}
                         <div className="form-group-modal">
                             <input
                                 type="text"
@@ -96,10 +96,10 @@ class AddAccount extends Component {
                                 value={this.state.apiKeySecret}
                                 onChange={this.onChange}
                             />
-                            {errors.apiKeySecret && (
-                                <div className="invalid-feedback">{errors.apiKeySecret}</div>
-                            )}
                         </div>
+                        {errors.apiKeySecret && (
+                            <div className="invalid-input">{errors.apiKeySecret}</div>
+                        )}
                         <div className="btn-group-modal">
                         <button
                             type="submit"

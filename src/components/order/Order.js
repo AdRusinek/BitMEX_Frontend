@@ -22,7 +22,6 @@ class Order extends Component {
               <td>{order.orderQty}</td>
               <td>{order.price}</td>
               <td>{order.leavesQty}</td>
-              <td>{order.ordType}</td>
             </tr>
           </thead>
         </table>

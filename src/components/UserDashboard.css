@@ -11,7 +11,7 @@
 #negativePrice {
     background: red;
     padding: 1px;
-    width: 5px;
+    width: 10px;
     height: 85%;
     position: absolute;
 }
@@ -19,14 +19,13 @@
 #positivePrice {
     background: #00cf00;
     padding: 1px;
-    width: 5px;
+    width: 10px;
     height: 85%;
     position: absolute;
 }
 
 /** TRAILING **/
 .trailing-table-header {
-    backdrop-filter: blur(60px);
     text-align: center;
 }
 
@@ -35,12 +34,14 @@
 }
 
 .trailing-table-header table {
+    backdrop-filter: blur(200px);
     width: 100%;
     table-layout: fixed;
 }
 
 .trailing-table {
-    backdrop-filter: blur(60px);
+    background: #111111;
+    backdrop-filter: blur(80px);
     text-align: center;
 }
 
@@ -71,7 +72,6 @@
 
 /** STOPS **/
 .stop-table-header {
-    backdrop-filter: blur(60px);
     text-align: center;
 }
 
@@ -80,12 +80,13 @@
 }
 
 .stop-table-header table {
+    backdrop-filter: blur(200px);
     width: 100%;
     table-layout: fixed;
 }
 
 .stop-table {
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(80px);
     text-align: center;
 }
 
@@ -95,6 +96,7 @@
 }
 
 .stop-table table {
+    background: #111111;
     width: 100%;
     table-layout: fixed;
 }
@@ -103,7 +105,6 @@
 
 /** POSITION **/
 .position-table-header {
-    backdrop-filter: blur(60px);
     text-align: center;
 }
 
@@ -112,12 +113,14 @@
 }
 
 .position-table-header table {
+    backdrop-filter: blur(200px);
     width: 100%;
     table-layout: fixed;
 }
 
 .position-table {
-    backdrop-filter: blur(60px);
+    background: #111111;
+    backdrop-filter: blur(80px);
     text-align: center;
 }
 
@@ -135,7 +138,6 @@
 
 /** ORDER **/
 .order-table-header {
-    backdrop-filter: blur(60px);
     text-align: center;
 }
 
@@ -144,12 +146,14 @@
 }
 
 .order-table-header table {
+    backdrop-filter: blur(200px);
     width: 100%;
     table-layout: fixed;
 }
 
 .order-table {
-    backdrop-filter: blur(60px);
+    background: #111111;
+    backdrop-filter: blur(80px);
     text-align: center;
 }
 

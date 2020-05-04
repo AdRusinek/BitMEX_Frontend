@@ -20,7 +20,6 @@ class Stop extends Component {
                         <td>{stop.orderQty}</td>
                         <td>{stop.stopPx}</td>
                         <td>{stop.leavesQty}</td>
-                        <td>{stop.ordType}</td>
                     </tr>
                     </thead>
                 </table>

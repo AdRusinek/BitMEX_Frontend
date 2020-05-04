@@ -11,10 +11,10 @@ class WaitingTrailingStopHeadTable extends Component {
         <table>
           <thead>
             <tr>
-              <th>Number</th>
               <th>Triggering Price</th>
               <th>Quantity</th>
               <th>Trial Value</th>
+              <th>Execution Instructions</th>
             </tr>
           </thead>
         </table>
