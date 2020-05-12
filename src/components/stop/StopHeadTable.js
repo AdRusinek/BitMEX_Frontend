@@ -13,8 +13,7 @@ class StopHeadTable extends Component {
                     <tr>
                         <th>Symbol</th>
                         <th>Quantity</th>
-                        <th>Stop Price</th>
-                        <th>Remaining</th>
+                        <th>Order Price</th>
                     </tr>
                     </thead>
                 </table>

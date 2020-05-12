@@ -18,8 +18,7 @@ class Stop extends Component {
                     <tr>
                         <td><div id={priceColor}/> {stop.symbol}</td>
                         <td>{stop.orderQty}</td>
-                        <td>{stop.stopPx}</td>
-                        <td>{stop.leavesQty}</td>
+                        <td>{stop.price}</td>
                     </tr>
                     </thead>
                 </table>

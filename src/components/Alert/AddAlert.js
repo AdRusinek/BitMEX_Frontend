@@ -73,7 +73,8 @@ class AddAlert extends Component {
                                 <div className="form-group">
                                     <input
                                         id="alertSet"
-                                        type="text"
+                                        type="number"
+                                        step="0.1"
                                         className={classnames("", {
                                             "is-invalid": errors.alertTriggeringPrice
                                         })}

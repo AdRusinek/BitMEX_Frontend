@@ -80,7 +80,7 @@
     background: #949494;
 }
 
-.alert-options{
+.alert-options {
     text-align: center;
 }
 
@@ -162,15 +162,27 @@
     color: white;
 }
 
-
 ::placeholder {
     color: white;
 }
 
-.trigger-radio{
-    background: red;
+.execInst-options {
+    margin-bottom: 4%;
 }
 
-.execInst-options{
-    background: blue;
+.execInst-options text {
+    margin-left: 20%;
+    font-size: 21px;
+}
+
+.exec-inst {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.close-on-trigger {
+    margin-left: 3%;
+    width: 5%;
+    height: 20px;
+    background: red;
 }

@@ -63,24 +63,24 @@ export class AddWaitingTrailingStop extends Component {
                     </p>
                     <form onSubmit={this.onSubmit}>
                         <div className="execInst-options">
-                            <select
-                                className="execInst-select"
-                                value={this.state.execInst}
-                                onChange={this.onChange}
-                                name="execInst"
-                            >
-                                <option value="MarkPrice">Mark</option>
-                                <option value="LastPrice">Last</option>
-                                <option value="IndexPrice">Index</option>
-                            </select>
+                                <select
+                                    className="exec-inst"
+                                    value={this.state.execInst}
+                                    onChange={this.onChange}
+                                    name="execInst"
+                                >
+                                    <option value="MarkPrice">Mark</option>
+                                    <option value="LastPrice">Last</option>
+                                    <option value="IndexPrice">Index</option>
+                                </select>
                             <text>Close on Trigger</text>
-                            <input
-                                type="checkbox"
-                                className="trigger-input"
-                                value={this.state.closeOnTrigger}
-                                onChange={this.onChange}
-                                name="closeOnTrigger"
-                            />
+                                <input
+                                    className="close-on-trigger"
+                                    type="checkbox"
+                                    value={this.state.closeOnTrigger}
+                                    onChange={this.onChange}
+                                    name="closeOnTrigger"
+                                />
                         </div>
                         <div className="form-group-modal">
                             <input

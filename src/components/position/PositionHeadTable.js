@@ -13,10 +13,11 @@ class PositionHeadTable extends Component {
             <tr>
               <th>Symbol</th>
               <th>Size</th>
+              <th>Value</th>
               <th>Entry Price</th>
               <th>Mark Price</th>
               <th>Liq. Price</th>
-              <th>Margin</th>
+              <th>Leverage</th>
             </tr>
           </thead>
         </table>

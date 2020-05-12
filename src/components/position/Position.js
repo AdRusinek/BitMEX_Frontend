@@ -18,11 +18,12 @@ class Position extends Component {
                     <thead>
                     <tr>
                         <td><div id={priceColor}/>{position.symbol}</td>
-                        <td>{position.currentQty}</td>
+                        <td>{position.openingQty}</td>
+                        <td>{position.homeNotional}</td>
                         <td>{position.avgEntryPrice}</td>
                         <td>{position.markPrice}</td>
                         <td>{position.liquidationPrice}</td>
-                        <td>{position.maintMargin}</td>
+                        <td>{position.leverage}</td>
                     </tr>
                     </thead>
                 </table>

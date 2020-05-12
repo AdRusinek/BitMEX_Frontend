@@ -46,24 +46,24 @@ class Dashboard extends Component {
                         ))}
                     </div>
                     <div className="user-dashboard-element">
-                    <StopHeadTable/>
-                    {stops.map(stop => (
-                        <Stop key={stop.orderID} stop={stop}/>
-                    ))}
+                        <PositionHeadTable/>
+                        {positions.map(position => (
+                            <Position
+                                key={position.openingTimestamp}
+                                position={position}
+                            />
+                        ))}
                     </div>
                     <div className="user-dashboard-element">
-                    <PositionHeadTable/>
-                    {positions.map(position => (
-                        <Position
-                            key={position.openingTimestamp}
-                            position={position}
-                        />
+                    <StopHeadTable/>
+                    {stops.map(stop => (
+                        <Stop key={stop.timestamp} stop={stop}/>
                     ))}
                     </div>
                     <div className="user-dashboard-element">
                     <OrderHeadTable/>
                     {orders.map(order => (
-                        <Order key={order.orderID} order={order}/>
+                        <Order key={order.timestamp} order={order}/>
                     ))}
                     </div>
                 </div>
