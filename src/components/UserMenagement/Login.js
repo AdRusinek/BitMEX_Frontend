@@ -11,6 +11,7 @@ class Login extends Component {
         this.state = {
             username: "",
             password: "",
+            code: "",
             errors: {}
         };
         this.onChange = this.onChange.bind(this);
@@ -37,7 +38,8 @@ class Login extends Component {
         e.preventDefault();
         const LoginRequest = {
             username: this.state.username,
-            password: this.state.password
+            password: this.state.password,
+            code: this.state.code
         };
 
         this.props.login(LoginRequest);
@@ -69,12 +71,13 @@ class Login extends Component {
                     <h2>Login</h2>
                     <p style={pStyle}>{message === null ? "" : message}</p>
                     <div className="form">
-                        <form onSubmit={this.onSubmit}>
+                        <form autocomplete="off" onSubmit={this.onSubmit}>
                             <div className="form-group">
                                 <label title="Username" htmlFor="username">
                                     <i className="fa fa-user"/>
                                 </label>
                                 <input
+                                    autocomplete="false"
                                     type="text"
                                     className={classnames({
                                         "is-invalid": errors.username
@@ -94,6 +97,7 @@ class Login extends Component {
                                     <i className="fa fa-key"/>
                                 </label>
                                 <input
+                                    autocomplete="false"
                                     type="password"
                                     className={classnames({
                                         "is-invalid": errors.password
@@ -107,6 +111,25 @@ class Login extends Component {
                             </div>
                             {errors.password && (
                                 <div className="invalid-input">{errors.password}</div>
+                            )}
+                            <div className="form-group">
+                                <label title="Code" htmlFor="code">
+                                    <i className="fa fa-refresh fa-spin fa-1x fa-fw"/>
+                                </label>
+                                <input
+                                    type="number"
+                                    className={classnames({
+                                        "is-invalid": errors.code
+                                    })}
+                                    placeholder="Two-Factor Token "
+                                    name="code"
+                                    value={this.state.code}
+                                    onChange={this.onChange}
+                                />
+                                <div className="clear"/>
+                            </div>
+                            {errors.code && (
+                                <div className="invalid-input">{errors.code}</div>
                             )}
                             <div className="btn-group">
                                 <button
