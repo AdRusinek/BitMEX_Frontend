@@ -4,13 +4,41 @@ img {
 
 body {
     font-family: arial;
-    background-image: url("https://images2.alphacoders.com/743/743004.jpg");
-    background-size: 100%;
+    background-image: url("https://images.wallpaperscraft.com/image/surface_gray_dark_light_shadow_18440_1920x1080.jpg");
+    background-repeat: no-repeat;
 }
 
 *:focus {outline:none}
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+}
 .invalid-input {
+    border: 1px red solid;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.73);
+    text-align: center;
     font-size: 12px;
-    color: #e11200;
+    color: #ff1200;
+}
+
+.invalid-input-add-account {
+    border: 1px red solid;
+    padding: 3px;
+    background: rgba(0, 0, 0, 0.73);
+    text-align: center;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+}
+
+.invalid-input-register {
+    border: 1px red solid;
+    padding: 1px;
+    background: rgba(0, 0, 0, 0.73);
+    text-align: center;
+    font-size: 12px;
+    color: #ff1200;
 }

@@ -45,7 +45,7 @@ class AccountDashboard extends Component {
                     </div>
                 </div>
                 <div className="guides">
-                <ShowFilesButton/>
+                {/*<ShowFilesButton/>*/}
                 </div>
             </div>
         );

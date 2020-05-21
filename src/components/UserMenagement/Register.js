@@ -10,7 +10,6 @@ class Register extends Component {
         super();
 
         this.state = {
-            value: false,
             username: "",
             fullName: "",
             password: "",
@@ -43,7 +42,6 @@ class Register extends Component {
         };
 
         this.props.createNewUser(newUser, this.props.history);
-        this.setState({value: true});
     }
 
     onChange(e) {
@@ -51,7 +49,28 @@ class Register extends Component {
     }
 
     render() {
+        let disableSubmit = false;
+
+        if (!validateEmail(this.state.username)) {
+            disableSubmit = true;
+        }
+        if (this.state.fullName === '') {
+            disableSubmit = true;
+        }
+        if (this.state.password === '') {
+            disableSubmit = true;
+        }
+        if (this.state.confirmPassword === '') {
+            disableSubmit = true;
+        }
+
         const {errors} = this.state;
+
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
         return (
             <div className="login-register">
                 <div className="logo">
@@ -76,7 +95,7 @@ class Register extends Component {
                             />
                         </div>
                         {errors.fullName && (
-                            <div className="invalid-input">{errors.fullName}</div>
+                            <div className="invalid-input-register">{errors.fullName}</div>
                         )}
                         <div className="form-group">
                             <label title="Username" htmlFor="username">
@@ -94,7 +113,7 @@ class Register extends Component {
                             />
                         </div>
                         {errors.username && (
-                            <div className="invalid-input">{errors.username}</div>
+                            <div className="invalid-input-register">{errors.username}</div>
                         )}
                         <div className="form-group">
                             <label title="Password" htmlFor="password">
@@ -112,7 +131,7 @@ class Register extends Component {
                             />
                         </div>
                         {errors.password && (
-                            <div className="invalid-input">{errors.password}</div>
+                            <div className="invalid-input-register">{errors.password}</div>
                         )}
                         <div className="form-group">
                             <label title="Password" htmlFor="password">
@@ -130,15 +149,15 @@ class Register extends Component {
                             />
                         </div>
                         {errors.confirmPassword && (
-                            <div className="invalid-input">
+                            <div className="invalid-input-register">
                                 {errors.confirmPassword}
                             </div>
                         )}
                         <div className="btn-group">
                             <button
-                                disabled={this.state.value}
                                 type="submit"
                                 className="login-register-btn"
+                                disabled={disableSubmit}
                             >
                                 <span>Register</span>
                             </button>

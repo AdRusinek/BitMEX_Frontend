@@ -38,7 +38,6 @@
     background: rgba(255, 255, 255, 0.73);
     border: 2px #111111;
     border-radius: 5px;
-    color: black;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -120,8 +119,9 @@
 
 .Modal {
     backdrop-filter: blur(15px);
-    background: rgba(0, 0, 0, 0.97);
+    background: rgba(255, 255, 255, 0.51);
     border: white 1px groove;
+    color: #000000;
     position: absolute;
     top: 10%;
     left: 5%;
@@ -143,23 +143,25 @@
 
 .register-btn-modal {
     margin-top: 15px;
-    color: black;
+    color: #000000;
+    border: #000000 1px groove;
     background: white;
-    border: none;
     width: 70%;
-    border-radius: 20px;
+}
+
+.register-btn-modal:disabled {
+    background: rgba(50, 50, 50, 0.36);
 }
 
 .form-group-modal {
     margin-bottom: 20px;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #000000;
 }
 
 .close-modal {
-    background: none;
+background: black;
     border: none;
-    backdrop-filter: blur(15px);
-    color: white;
+    color: red;
 }
 
 ::placeholder {

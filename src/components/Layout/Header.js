@@ -17,16 +17,16 @@ class Header extends Component {
         const {validToken, user} = this.props.security;
 
         const userIsAuthenticated = (
-            <div className="collapse navbar-collapse" id="mobile-nav">
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <Link id="headerText"  className="nav-link" to="/accounts">
-                            <i className="fa fa-user-o"/> {user.fullName}
+            <div className="custom-navbar">
+                <ul>
+                    <li>
+                        <Link to="/accounts" style={{textDecoration: 'none'}}>
+                            <text id="headText"> Główny panel</text>
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link id="headerText"  className="nav-link" to="/logout" onClick={this.logout.bind(this)}>
-                            Logout
+                    <li>
+                        <Link to="/logout" style={{textDecoration: 'none'}} onClick={this.logout.bind(this)}>
+                            <text id="headText">Wyloguj</text>
                         </Link>
                     </li>
                 </ul>
@@ -34,17 +34,16 @@ class Header extends Component {
         );
 
         const userIsNotAuthenticated = (
-            <div>
-
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <Link id="headerText" className="nav-link" to="/register">
-                            Sign Up
+            <div className="custom-navbar">
+                <ul>
+                    <li>
+                        <Link id="headText" to="/register" style={{textDecoration: 'none'}}>
+                            Zarejestruj
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link id="headerText" className="nav-link" to="/">
-                            Login
+                    <li>
+                        <Link id="headText" to="/" style={{textDecoration: 'none'}}>
+                            Zaloguj
                         </Link>
                     </li>
                 </ul>
@@ -61,11 +60,8 @@ class Header extends Component {
 
         return (
             <div>
-                <nav id="mainNavbar" className="navbar navbar-expand-sm">
+                <nav className="">
                     <div className="container">
-                        <h3 id="managementTool" className="navbar-brand" >
-                            BitMEX Management Tool
-                        </h3>
                         {headerLinks}
                     </div>
                 </nav>

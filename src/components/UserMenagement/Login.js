@@ -41,7 +41,6 @@ class Login extends Component {
             password: this.state.password,
             code: this.state.code
         };
-
         this.props.login(LoginRequest);
     }
 
@@ -51,6 +50,18 @@ class Login extends Component {
 
     render() {
         const {errors} = this.state;
+
+        let disableSubmit = false;
+        if (this.state.username.length < 5) {
+            disableSubmit = true;
+        }
+        if (this.state.password.length < 6) {
+            disableSubmit = true;
+        }
+        if (this.state.code.length < 6) {
+            disableSubmit = true;
+        }
+
         let message;
         if (this.props.location.state == null) {
             message = "";
@@ -58,9 +69,9 @@ class Login extends Component {
             message = this.props.location.state.detail;
         }
         const pStyle = {
-            fontSize: '13px',
+            fontSize: '11px',
             textAlign: 'center',
-            color: 'red'
+            color: 'orange'
         };
         return (
             <div>
@@ -89,9 +100,6 @@ class Login extends Component {
                                 />
                                 <div className="clear"/>
                             </div>
-                            {errors.username && (
-                                <div className="invalid-input">{errors.username}</div>
-                            )}
                             <div className="form-group">
                                 <label title="Password" htmlFor="password">
                                     <i className="fa fa-key"/>
@@ -109,9 +117,6 @@ class Login extends Component {
                                 />
                                 <div className="clear"/>
                             </div>
-                            {errors.password && (
-                                <div className="invalid-input">{errors.password}</div>
-                            )}
                             <div className="form-group">
                                 <label title="Code" htmlFor="code">
                                     <i className="fa fa-refresh fa-spin fa-1x fa-fw"/>
@@ -135,6 +140,7 @@ class Login extends Component {
                                 <button
                                     type="submit"
                                     className="login-register-btn"
+                                    disabled={disableSubmit}
                                 >Login</button>
                             </div>
                         </form>

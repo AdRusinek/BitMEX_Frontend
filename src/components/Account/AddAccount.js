@@ -45,6 +45,17 @@ class AddAccount extends Component {
     }
 
     render() {
+        let disableSubmit = false;
+        if (this.state.accountName === '') {
+            disableSubmit = true;
+        }
+        if (this.state.apiKey.length < 20) {
+            disableSubmit = true;
+        }
+        if (this.state.apiKeySecret.length < 30) {
+            disableSubmit = true;
+        }
+
         const {errors} = this.state;
         return (
             <div className="container">
@@ -66,7 +77,7 @@ class AddAccount extends Component {
                             />
                         </div>
                         {errors.accountName && (
-                            <div className="invalid-input">
+                            <div className="invalid-input-add-account">
                                 {errors.accountName}
                             </div>
                         )}
@@ -83,7 +94,7 @@ class AddAccount extends Component {
                             />
                         </div>
                         {errors.apiKey && (
-                            <div className="invalid-input">{errors.apiKey}</div>
+                            <div className="invalid-input-add-account">{errors.apiKey}</div>
                         )}
                         <div className="form-group-modal">
                             <input
@@ -98,12 +109,13 @@ class AddAccount extends Component {
                             />
                         </div>
                         {errors.apiKeySecret && (
-                            <div className="invalid-input">{errors.apiKeySecret}</div>
+                            <div className="invalid-input-add-account">{errors.apiKeySecret}</div>
                         )}
                         <div className="btn-group-modal">
                         <button
                             type="submit"
                             className="register-btn-modal"
+                            disabled={disableSubmit}
                         >Add Account</button>
                         </div>
                     </form>

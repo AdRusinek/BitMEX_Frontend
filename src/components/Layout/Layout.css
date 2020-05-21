@@ -1,8 +1,39 @@
 
 #headerText{
-    color: #304dff;
+    color: white;
 }
 
 #headerText:hover {
     color: #142b95;
+}
+
+.custom-navbar {
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 70%;
+    padding: 0;
+}
+
+ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+}
+
+#headText {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: white;
+}
+
+#headText:hover {
+    background: gray;
+}
+
+.fa-user-o {
+ color: white;
 }
