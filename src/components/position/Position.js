@@ -17,7 +17,7 @@ class Position extends Component {
                 <table>
                     <thead>
                     <tr>
-                        <td><div id={priceColor}/>{position.symbol}</td>
+                        <td>{position.symbol}<div id={priceColor}/></td>
                         <td>{position.openingQty}</td>
                         <td>{position.homeNotional}</td>
                         <td>{position.avgEntryPrice}</td>

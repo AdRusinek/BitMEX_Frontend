@@ -20,11 +20,14 @@ class AccountDashboard extends Component {
     render() {
         const {customAlerts} = this.props.customAlert;
         const {accounts} = this.props.account;
+
         return (
             <div className="account-dashboard container">
                 <div className="row">
                     <div className="col-sm-6 accounts">
+                        {accounts.length <= 3 &&
                         <AddAccountButton/>
+                        }
                         {accounts.map(account => (
                             <Link id="account-link" to={`/dashboard/${account.id}`}>
                                 <Account
@@ -35,7 +38,9 @@ class AccountDashboard extends Component {
                         ))}
                     </div>
                     <div className="col-sm-6 alerts">
+                        {customAlerts.length <= 3 &&
                         <AddAlertButton/>
+                        }
                         {customAlerts.map(customAlert => (
                             <Alert
                                 key={customAlert.id}

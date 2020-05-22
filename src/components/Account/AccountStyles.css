@@ -1,13 +1,14 @@
 .account-dashboard {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 20px;
     margin-top: 50px;
     padding: 50px;
     position: relative;
 }
 
 .accounts {
-    padding-right: 100px;
-    padding-left: 100px;
-    text-decoration: none
+    text-decoration: none;
+    padding: 20px;
 }
 
 #account-link {
@@ -19,7 +20,7 @@
     margin-top: 10px;
     margin-left: 70px;
     margin-right: 70px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     background: #111111;
     border: 2px groove rgb(255, 255, 255);
@@ -46,16 +47,15 @@
     background: #949494;
 }
 
-.alerts {
-    padding-right: 100px;
-    padding-left: 100px;
+.alerts{
+    padding: 20px;
 }
 
 .alert-display {
-    padding: 8px;
+    padding: 4px;
     margin-top: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 150px;
+    margin-right: 150px;
     text-align: center;
     background: #111111;
     border: 2px groove rgb(255, 255, 255);
@@ -119,9 +119,9 @@
 
 .Modal {
     backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.51);
+    background: rgba(83, 83, 83, 1);
     border: white 1px groove;
-    color: #000000;
+    color: white;
     position: absolute;
     top: 10%;
     left: 5%;
@@ -143,19 +143,19 @@
 
 .register-btn-modal {
     margin-top: 15px;
-    color: #000000;
+    color: rgba(44, 44, 44, 0.91);
     border: #000000 1px groove;
-    background: white;
+    background: #ffffff;
     width: 70%;
 }
 
 .register-btn-modal:disabled {
-    background: rgba(50, 50, 50, 0.36);
+    background: rgba(77, 77, 77, 0.79);
 }
 
 .form-group-modal {
     margin-bottom: 20px;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #ffffff;
 }
 
 .close-modal {

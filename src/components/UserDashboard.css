@@ -8,19 +8,16 @@
 }
 
 #negativePrice {
-    background: #930000;
-    padding: 1px;
-    width: 10px;
-    height: 85%;
-    position: absolute;
+    border: 1px solid red;
+    /*background: #930000;*/
+    /*padding: 1px;*/
+    /*width: 10px;*/
+    /*height: 85%;*/
+    /*position: absolute;*/
 }
 
 #positivePrice {
-    background: #007400;
-    padding: 1px;
-    width: 10px;
-    height: 85%;
-    position: absolute;
+    border: 1px solid #00ff00;
 }
 
 /** TRAILING **/

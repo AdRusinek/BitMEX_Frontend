@@ -18,7 +18,7 @@ class Order extends Component {
         <table>
           <thead>
             <tr>
-              <td><div id={priceColor}/>{order.symbol}</td>
+              <td>{order.symbol}<div id={priceColor}/></td>
               <td>{order.orderQty}</td>
               <td>{order.price}</td>
               <td>{order.leavesQty}</td>

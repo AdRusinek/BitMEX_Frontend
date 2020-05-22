@@ -35,7 +35,9 @@ class Dashboard extends Component {
         return (
             <div className="user-dashboard container">
                 <div className="col-sm-12">
-                    <AddWaitingTrailingStopButton accountId={id}/>
+                    {waitingTrailingStops.length <= 4 &&
+                    < AddWaitingTrailingStopButton accountId={id}/>
+                    }
                     <div className="user-dashboard-element">
                         <WaitingTrailingStopHeadTable/>
                         {waitingTrailingStops.map(waitingTrailingStop => (
