@@ -54,6 +54,17 @@ export class AddWaitingTrailingStop extends Component {
 
     render() {
         const {errors} = this.state;
+        let disableSubmit = false;
+
+        if (this.state.startingPrice === '') {
+            disableSubmit = true;
+        }
+        if (this.state.quantity === '') {
+            disableSubmit = true;
+        }
+        if (this.state.trialValue === '') {
+            disableSubmit = true;
+        }
 
         return (
             <div className="container">
@@ -133,6 +144,7 @@ export class AddWaitingTrailingStop extends Component {
                             <button
                                 type="submit"
                                 className="register-btn-modal"
+                                disabled={disableSubmit}
                             >Add Trailing
                             </button>
                         </div>

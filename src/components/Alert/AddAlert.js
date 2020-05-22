@@ -48,6 +48,12 @@ class AddAlert extends Component {
     }
 
     render() {
+        let disableSubmit = false;
+
+        if (this.state.alertTriggeringPrice.length < 4) {
+            disableSubmit = true;
+        }
+
         const {errors} = this.state;
         return (
             <div id="addAlertMainDiv">
@@ -111,6 +117,7 @@ class AddAlert extends Component {
                                     <button
                                         type="submit"
                                         className="register-btn-modal"
+                                        disabled={disableSubmit}
                                     >Add Alert</button>
                                 </div>
                             </form>
