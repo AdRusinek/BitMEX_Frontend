@@ -12,7 +12,9 @@ class WaitingTrailingStop extends Component {
               <td>{waitingTrailingStop.startingPrice}</td>
               <td>{waitingTrailingStop.quantity}</td>
               <td>{waitingTrailingStop.trialValue}</td>
-              <td>{waitingTrailingStop.execInst}</td>
+              <td>{waitingTrailingStop.execInst}
+                {/*<i className="fa fa-trash-o" aria-hidden="true">{waitingTrailingStop.id}</i>*/}
+              </td>
             </tr>
           </thead>
         </table>

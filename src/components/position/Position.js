@@ -6,7 +6,7 @@ class Position extends Component {
 
         let priceColor;
 
-        if (position.currentQty >= 0) {
+        if (position.openingQty >= 0) {
             priceColor="positivePrice";
         } else {
             priceColor="negativePrice"

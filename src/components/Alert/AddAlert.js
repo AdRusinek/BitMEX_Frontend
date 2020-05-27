@@ -10,6 +10,7 @@ class AddAlert extends Component {
         alertMessage: "",
         alertTriggeringPrice: "",
         direction: "above",
+        alertAmount: "",
         errors: {}
     };
 
@@ -111,6 +112,11 @@ class AddAlert extends Component {
                                 {errors.alertMessage && (
                                     <div className="invalid-input">
                                         {errors.alertMessage}
+                                    </div>
+                                )}
+                                {errors.alertAmount && (
+                                    <div className="invalid-input">
+                                        {errors.alertAmount}
                                     </div>
                                 )}
                                 <div className="btn-group-modal">

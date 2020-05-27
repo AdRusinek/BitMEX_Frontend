@@ -9,6 +9,7 @@ export const POST_ACCOUNT = "POST_ACCOUNT";
 
 export const GET_ALERTS = "GET_ALERTS";
 export const POST_ALERT = "POST_ALERT";
+export const DELETE_ALERT = "DELETE_ALERT";
 
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 

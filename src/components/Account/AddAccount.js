@@ -10,6 +10,8 @@ class AddAccount extends Component {
         accountName: "",
         apiKey: "",
         apiKeySecret: "",
+        accountAmount: "",
+        credentialsRepeated: "",
         errors: {}
     };
 
@@ -110,6 +112,12 @@ class AddAccount extends Component {
                         </div>
                         {errors.apiKeySecret && (
                             <div className="invalid-input-add-account">{errors.apiKeySecret}</div>
+                        )}
+                        {errors.accountAmount && (
+                            <div className="invalid-input-add-account">{errors.accountAmount}</div>
+                        )}
+                        {errors.credentialsRepeated && (
+                            <div className="invalid-input-add-account">{errors.credentialsRepeated}</div>
                         )}
                         <div className="btn-group-modal">
                         <button

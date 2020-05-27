@@ -1,4 +1,4 @@
-import {POST_ALERT, GET_ALERTS} from "../actions/types";
+import {POST_ALERT, GET_ALERTS, DELETE_ALERT} from "../actions/types";
 
 const initialState = {
     customAlerts: [],
@@ -16,6 +16,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 customAlerts: [action.payload, ...state.customAlerts]
+            };
+        case DELETE_ALERT:
+            return {
+                ...state,
+                customAlerts: state.customAlerts.filter(customAlert => customAlert.id !== action.payload)
             };
         default:
             return state;

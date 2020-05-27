@@ -1,14 +1,54 @@
+.account-delete {
+    font-size: 13px;
+    text-align: center;
+    margin-left: 70%;
+    margin-right: 28%;
+    color: red;
+}
+
+.account-delete:hover {
+    background: #949494;
+}
+
+.alert-delete {
+    font-size: 13px;
+    text-align: center;
+    margin-left: 60%;
+    margin-right: 38%;
+    color: red;
+}
+
+.alert-delete:hover {
+    background: #949494;
+}
+.exceeded-amount-account {
+    text-align: center;
+    font-size: 12px;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
+.exceeded-amount-alert {
+    text-align: center;
+    font-size: 12px;
+    color: #a800a8;
+    border: 1px solid #a800a8;
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
 .account-dashboard {
     background: rgba(0, 0, 0, 0.55);
     border-radius: 20px;
     margin-top: 50px;
-    padding: 50px;
+    padding-top: 15px;
     position: relative;
 }
 
 .accounts {
     text-decoration: none;
-    padding: 20px;
 }
 
 #account-link {
@@ -18,12 +58,11 @@
 .account-display {
     padding: 8px;
     margin-top: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
-    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
     text-align: center;
     background: #111111;
-    border: 2px groove rgb(255, 255, 255);
+    border: 1px groove rgb(255, 255, 255);
     color: white;
 }
 
@@ -54,11 +93,11 @@
 .alert-display {
     padding: 4px;
     margin-top: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 40%;
+    margin-right: 40%;
     text-align: center;
     background: #111111;
-    border: 2px groove rgb(255, 255, 255);
+    border: 1px groove rgb(255, 255, 255);
     color: white;
 }
 
@@ -159,7 +198,7 @@
 }
 
 .close-modal {
-background: black;
+    background: black;
     border: none;
     color: red;
 }

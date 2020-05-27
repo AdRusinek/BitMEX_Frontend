@@ -8,49 +8,86 @@ import {Link} from "react-router-dom";
 import AddAlertButton from "../Alert/AddAlertButton";
 import Alert from "../Alert/Alert";
 import {getAlerts} from "../../actions/alertActions";
-import ShowFilesButton from "../files/ShowFilesButton";
+import {deleteAlert} from "../../actions/alertActions";
 import {css} from "./AccountStyles.css";
 
 class AccountDashboard extends Component {
     componentDidMount() {
         this.props.getAccounts();
         this.props.getAlerts();
-    }
+    };
+
+    onDeleteClick(alert_id) {
+        this.props.deleteAlert(alert_id);
+    };
 
     render() {
         const {customAlerts} = this.props.customAlert;
         const {accounts} = this.props.account;
 
+        function manageAddAccountButton() {
+            if (accounts.length <= 2) {
+                return <AddAccountButton/>
+            } else {
+                return (
+                    <div className="exceeded-amount-account">
+                        <text>Osiągnąłeś maksymalną ilość kont.</text>
+                    </div>
+                );
+            }
+        }
+
+        function manageAddAlertButton() {
+            if (customAlerts.length < 2) {
+                return <AddAlertButton/>
+            } else {
+                return (
+                    <div className="exceeded-amount-alert">
+                        <text>Osiągnąłeś maksymalną ilość alertów.</text>
+                    </div>
+                );
+            }
+        }
+
         return (
             <div className="account-dashboard container">
-                <div className="row">
-                    <div className="col-sm-6 accounts">
-                        {accounts.length <= 3 &&
-                        <AddAccountButton/>
-                        }
+                <div className="col-sm-12">
+                    <div className="accounts">
+                        {manageAddAccountButton()}
                         {accounts.map(account => (
-                            <Link id="account-link" to={`/dashboard/${account.id}`}>
-                                <Account
-                                    key={account.id}
-                                    account={account}
-                                />
-                            </Link>
+                            <div>
+                                <div className="account-display">
+                                    <Link id="account-link" to={`/dashboard/${account.id}`}>
+                                        <Account
+                                            key={account.id}
+                                            account={account}
+                                        />
+                                    </Link>
+                                </div>
+                                <div className="account-delete">
+                                    <i className="fa fa-trash-o" aria-hidden="true"/>
+                                </div>
+                            </div>
                         ))}
                     </div>
-                    <div className="col-sm-6 alerts">
-                        {customAlerts.length <= 3 &&
-                        <AddAlertButton/>
-                        }
+                    <div className="alerts">
+                        {manageAddAlertButton()}
                         {customAlerts.map(customAlert => (
-                            <Alert
-                                key={customAlert.id}
-                                customAlert={customAlert}
-                            />
+                            <div>
+                                <Alert
+                                    key={customAlert.id}
+                                    customAlert={customAlert}
+                                />
+                                <div className="alert-delete">
+                                    <i className="fa fa-trash-o" aria-hidden="true"
+                                       onClick={this.onDeleteClick.bind(this, customAlert.id)}/>
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
                 <div className="guides">
-                {/*<ShowFilesButton/>*/}
+                    {/*<ShowFilesButton/>*/}
                 </div>
             </div>
         );
@@ -58,6 +95,7 @@ class AccountDashboard extends Component {
 }
 
 AccountDashboard.propTypes = {
+    deleteAlert: PropTypes.func.isRequired,
     account: PropTypes.object.isRequired,
     getAccounts: PropTypes.func.isRequired,
     customAlert: PropTypes.object.isRequired,
@@ -69,4 +107,4 @@ const mapStateToProps = state => ({
     customAlert: state.customAlert
 });
 
-export default connect(mapStateToProps, {getAccounts, getAlerts})(AccountDashboard);
+export default connect(mapStateToProps, {getAccounts, getAlerts, deleteAlert})(AccountDashboard);

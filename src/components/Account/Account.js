@@ -4,8 +4,8 @@ class Account extends Component {
     render() {
         const {account} = this.props;
         return (
-            <div className="account-display">
-                <text>{account.accountName}</text>
+            <div>
+                <text style={{color: "white"}}>{account.accountName}</text>
             </div>
         );
     }

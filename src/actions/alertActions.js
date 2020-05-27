@@ -1,5 +1,5 @@
 import axios from "axios";
-import {POST_ALERT, GET_ALERTS, GET_ERRORS} from "./types";
+import {POST_ALERT, GET_ALERTS, GET_ERRORS, DELETE_ALERT} from "./types";
 
 export const getAlerts = () => async dispatch => {
     const res = await axios.get("/api/alerts/get-alerts");
@@ -21,6 +21,16 @@ export const postAlert = (newAlert, closeModal) => async dispatch => {
         dispatch({
             type: GET_ERRORS,
             payload: err.response.data
+        });
+    }
+};
+
+export const deleteAlert = id => async dispatch => {
+    if (window.confirm("Jesteś pewien, że chcesz usunąć ten alert?")) {
+        await axios.delete(`/api/alerts/${id}`);
+        dispatch({
+            type: DELETE_ALERT,
+            payload: id
         });
     }
 };
