@@ -1,4 +1,4 @@
-import { GET_WAITING_TRAILING_STOPS, POST_TRAILING_STOP } from "../actions/types";
+import {DELETE_TRAILING_STOP, GET_WAITING_TRAILING_STOPS, POST_TRAILING_STOP} from "../actions/types";
 
 const initialState = {
   waitingTrailingStops: [],
@@ -16,6 +16,13 @@ export default function(state = initialState, action) {
       return {
         ...state,
         waitingTrailingStops: [action.payload, ...state.waitingTrailingStops]
+      };
+    case DELETE_TRAILING_STOP:
+      return {
+        ...state,
+        waitingTrailingStops: state.waitingTrailingStops.filter(
+            waitingTrailingStop => waitingTrailingStop.id !== action.payload
+        )
       };
     default:
       return state;

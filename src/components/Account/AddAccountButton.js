@@ -57,9 +57,7 @@ export class AddAccountButton extends Component {
                             className="close-modal"
                             onClick={this.handleCloseModal}
                         >
-                            <div className="logo">
                             <i className="fa fa-times"/>
-                            </div>
                         </button>
                         <AddAccount closeModal={this.handleCloseModal}/>
                     </Modal>

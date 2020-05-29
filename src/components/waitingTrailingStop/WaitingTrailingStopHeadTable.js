@@ -15,6 +15,7 @@ class WaitingTrailingStopHeadTable extends Component {
               <th>Quantity</th>
               <th>Trial Value</th>
               <th>Execution Instructions</th>
+              <th>Delete Trailing Stop</th>
             </tr>
           </thead>
         </table>

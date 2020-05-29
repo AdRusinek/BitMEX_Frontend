@@ -44,9 +44,7 @@ export class AddWaitingTrailingStopButton extends Component {
                             className="close-modal"
                             onClick={this.handleCloseModal}
                         >
-                            <div className="logo">
-                                <i className="fa fa-window-close"/>
-                            </div>
+                            <i className="fa fa-window-close"/>
                         </button>
                         <AddTrailing paramsAccountId={this.props.accountId} closeModal={this.handleCloseModal}/>
                     </Modal>

@@ -9,6 +9,7 @@ import {css} from "../Account/AccountStyles.css";
 export class AddWaitingTrailingStop extends Component {
 
     state = {
+        trailingStopAmount: "",
         startingPrice: "",
         quantity: "",
         trialValue: "",
@@ -140,6 +141,9 @@ export class AddWaitingTrailingStop extends Component {
                         {errors.trialValue && (
                             <div className="invalid-input">{errors.trialValue}</div>
                         )}
+                        {errors.trailingStopAmount && (
+                            <div className="invalid-input">{errors.trailingStopAmount}</div>
+                        )}
                         <div className="btn-group-modal">
                             <button
                                 type="submit"
@@ -154,7 +158,6 @@ export class AddWaitingTrailingStop extends Component {
         );
     }
 }
-
 AddWaitingTrailingStop.propTypes = {
     createTrailing: PropTypes.func.isRequired,
     closeModal: PropTypes.func.isRequired,

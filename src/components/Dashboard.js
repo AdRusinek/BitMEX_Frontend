@@ -15,6 +15,7 @@ import WaitingTrailingStopHeadTable from "./WaitingTrailingStop/WaitingTrailingS
 import WaitingTrailingStop from "./WaitingTrailingStop/WaitingTrailingStop";
 import AddWaitingTrailingStopButton from "./WaitingTrailingStop/AddWaitingTrailingStopButton";
 import {css} from "./UserDashboard.css";
+import AddAlertButton from "./Account/AccountDashboard";
 
 class Dashboard extends Component {
     componentDidMount() {
@@ -32,12 +33,23 @@ class Dashboard extends Component {
         const {stops} = this.props.stop;
         const {waitingTrailingStops} = this.props.waitingTrailingStop;
 
+        function manageAddTrailingStopButton() {
+            if (waitingTrailingStops.length < 6) {
+                return <AddWaitingTrailingStopButton accountId={id}/>
+            } else {
+                return (
+                    <div className="exceeded-amount-trailing-stops">
+                        <text>Maksymalna ilość Trailingów.</text>
+                    </div>
+                );
+            }
+        }
+
+
         return (
             <div className="user-dashboard container">
                 <div className="col-sm-12">
-                    {waitingTrailingStops.length <= 4 &&
-                    < AddWaitingTrailingStopButton accountId={id}/>
-                    }
+                    {manageAddTrailingStopButton()}
                     <div className="user-dashboard-element">
                         <WaitingTrailingStopHeadTable/>
                         {waitingTrailingStops.map(waitingTrailingStop => (

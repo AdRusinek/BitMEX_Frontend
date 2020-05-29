@@ -1,5 +1,5 @@
 import axios from "axios";
-import {POST_TRAILING_STOP, GET_ERRORS, GET_WAITING_TRAILING_STOPS} from "./types";
+import {POST_TRAILING_STOP, GET_ERRORS, GET_WAITING_TRAILING_STOPS, DELETE_TRAILING_STOP} from "./types";
 import  {clearErrors} from "../actions/commonActions";
 
 export const getWaitingTrailingStops = (id) => async dispatch => {
@@ -23,6 +23,20 @@ export const postTrailingStop = (trailing, closeModal, id) => async dispatch => 
     dispatch({
       type: GET_ERRORS,
       payload: err.response.data
+    });
+  }
+};
+
+export const deleteTrailingStop = (trailing_id, account_id) => async dispatch => {
+  if (
+      window.confirm(
+          `Jesteś pewien, że chcesz usunąć ten czekający Trailing Stop? `
+      )
+  ) {
+    await axios.delete(`/api/trailing-stops/${account_id}/${trailing_id}`);
+    dispatch({
+      type: DELETE_TRAILING_STOP,
+      payload: trailing_id
     });
   }
 };

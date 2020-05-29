@@ -25,6 +25,13 @@
 }
 
 /** TRAILING **/
+#delete-trailing {
+color: red;
+}
+
+#delete-trailing:hover {
+    background: #949494;
+}
 .trailing-table-header {
     text-align: center;
 }
@@ -53,7 +60,6 @@
 }
 
 .trailing-table table {
-
     width: 100%;
     table-layout: fixed;
 }
@@ -177,5 +183,3 @@
     table-layout: fixed;
 }
 
-.add-trailing-content {
-}
