@@ -1,6 +1,10 @@
 .user-dashboard {
     font-family: arial;
     font-size: 13px;
+    background: rgba(0, 0, 0, 0.58);
+    padding-bottom: 100px;
+    padding-top: 50px;
+    border-radius: 20px;
 }
 
 .user-dashboard-element {

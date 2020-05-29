@@ -6,6 +6,7 @@ export const POST_TRAILING_STOP = "POST_TRAILING_STOP";
 
 export const GET_ACCOUNTS = "GET_ACCOUNTS";
 export const POST_ACCOUNT = "POST_ACCOUNT";
+export const DELETE_ACCOUNT = "DELETE_ACCOUNT";
 
 export const GET_ALERTS = "GET_ALERTS";
 export const POST_ALERT = "POST_ALERT";

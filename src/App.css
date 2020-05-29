@@ -1,10 +1,8 @@
-img {
-    width: 100%;
-}
 
 body {
     font-family: arial;
-    background-image: url("https://besthqwallpapers.com/img/original/48515/4k-arrows-android-gray-nad-black-lollipop.jpg");
+    background-image: url("back.jpg");
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 

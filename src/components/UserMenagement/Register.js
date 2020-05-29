@@ -156,7 +156,7 @@ class Register extends Component {
                         <div className="btn-group">
                             <button
                                 type="submit"
-                                className="login-register-btn"
+                                className="register-btn"
                                 disabled={disableSubmit}
                             >
                                 <span>Register</span>

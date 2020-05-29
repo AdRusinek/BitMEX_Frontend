@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getAccounts} from "../../actions/accountActions";
+import {deleteAccount, getAccounts} from "../../actions/accountActions";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import Account from "./Account";
@@ -17,9 +17,13 @@ class AccountDashboard extends Component {
         this.props.getAlerts();
     };
 
-    onDeleteClick(alert_id) {
+    onDeleteAlertClick(alert_id) {
         this.props.deleteAlert(alert_id);
     };
+
+    onDeleteAccountClick(account_id) {
+        this.props.deleteAccount(account_id);
+    }
 
     render() {
         const {customAlerts} = this.props.customAlert;
@@ -65,7 +69,9 @@ class AccountDashboard extends Component {
                                     </Link>
                                 </div>
                                 <div className="account-delete">
-                                    <i className="fa fa-trash-o" aria-hidden="true"/>
+                                    <i className="fa fa-trash-o" aria-hidden="true"
+                                       onClick={this.onDeleteAccountClick.bind(this, account.id)}
+                                    />
                                 </div>
                             </div>
                         ))}
@@ -80,7 +86,7 @@ class AccountDashboard extends Component {
                                 />
                                 <div className="alert-delete">
                                     <i className="fa fa-trash-o" aria-hidden="true"
-                                       onClick={this.onDeleteClick.bind(this, customAlert.id)}/>
+                                       onClick={this.onDeleteAlertClick.bind(this, customAlert.id)}/>
                                 </div>
                             </div>
                         ))}
@@ -95,6 +101,7 @@ class AccountDashboard extends Component {
 }
 
 AccountDashboard.propTypes = {
+    deleteAccount: PropTypes.func.isRequired,
     deleteAlert: PropTypes.func.isRequired,
     account: PropTypes.object.isRequired,
     getAccounts: PropTypes.func.isRequired,
@@ -107,4 +114,4 @@ const mapStateToProps = state => ({
     customAlert: state.customAlert
 });
 
-export default connect(mapStateToProps, {getAccounts, getAlerts, deleteAlert})(AccountDashboard);
+export default connect(mapStateToProps, {getAccounts, getAlerts, deleteAlert, deleteAccount})(AccountDashboard);

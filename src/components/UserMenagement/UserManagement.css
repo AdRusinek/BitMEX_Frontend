@@ -8,8 +8,10 @@ body {
 }
 
 .login-register {
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 20px;
     height: 400px;
-    width: 320px;
+    width: 520px;
     position: relative;
     top: 50%;
     transform: translateY(15%);
@@ -22,7 +24,7 @@ body {
 
 .logo > i {
     font-size: 30px;
-    margin-top: 2px;
+    margin-top: 20px;
 }
 
 h2 {
@@ -31,8 +33,10 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ffffff;
+    margin-bottom: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-bottom: 1px solid #ffffff;
 }
 
 input, label {
@@ -62,21 +66,36 @@ p, a, input, label {
 }
 
 .login-register-btn {
-    background: rgba(0, 0, 0, 0.71);
+    background: rgba(0, 0, 0, 0.85);
     display: inline-block;
     margin-top: 10px;
     padding: 5px 100px;
     border-radius: 10px;
     border: #111111;
     color: white;
-    margin-left: 16%;
+    margin-left: 60%;
 }
 
 .login-register-btn:disabled {
+    margin-left: 60%;
     background: rgba(0, 0, 0, 0.19);
 }
 
+.register-btn {
+    background: rgba(0, 0, 0, 0.85);
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 100px;
+    border-radius: 10px;
+    border: #111111;
+    color: white;
+    margin-left: 50%;
+}
 
+.register-btn:disabled {
+    margin-left: 50%;
+    background: rgba(0, 0, 0, 0.19);
+}
 
 .clear {
     clear: both;

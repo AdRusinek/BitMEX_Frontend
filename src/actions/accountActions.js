@@ -1,5 +1,5 @@
 import axios from "axios";
-import {POST_ACCOUNT, GET_ACCOUNTS, GET_ERRORS} from "./types";
+import {POST_ACCOUNT, GET_ACCOUNTS, GET_ERRORS, DELETE_ACCOUNT} from "./types";
 
 export const getAccounts = () => async dispatch => {
     const res = await axios.get("/api/accounts/get-accounts");
@@ -21,6 +21,16 @@ export const postAccount = (newAccount, closeModal) => async dispatch => {
         dispatch({
             type: GET_ERRORS,
             payload: err.response.data
+        });
+    }
+};
+
+export const deleteAccount = id => async dispatch => {
+    if (window.confirm("Jesteś pewien, że chcesz usunąć to konto?")) {
+        await axios.delete(`/api/accounts/${id}`);
+        dispatch({
+            type: DELETE_ACCOUNT,
+            payload: id
         });
     }
 };
