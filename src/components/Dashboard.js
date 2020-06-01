@@ -15,9 +15,26 @@ import WaitingTrailingStopHeadTable from "./WaitingTrailingStop/WaitingTrailingS
 import WaitingTrailingStop from "./WaitingTrailingStop/WaitingTrailingStop";
 import AddWaitingTrailingStopButton from "./WaitingTrailingStop/AddWaitingTrailingStopButton";
 import {css} from "./UserDashboard.css";
-import AddAlertButton from "./Account/AccountDashboard";
 
 class Dashboard extends Component {
+    state = {
+        limitsExceeded: "",
+        errors: {}
+    };
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.errors !== prevState.errors) {
+            return {errors: nextProps.errors};
+        }
+        return null;
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({errors: nextProps.errors});
+        }
+    }
+
     componentDidMount() {
         const {id} = this.props.match.params;
         this.props.getPositions(id);
@@ -45,10 +62,13 @@ class Dashboard extends Component {
             }
         }
 
-
+        const {errors} = this.state;
         return (
             <div className="user-dashboard container">
                 <div className="col-sm-12">
+                    {errors.limitsExceeded && (
+                        <div className="limits-exceeded">{errors.limitsExceeded}</div>
+                    )}
                     {manageAddTrailingStopButton()}
                     <div className="user-dashboard-element">
                         <WaitingTrailingStopHeadTable/>
@@ -94,14 +114,16 @@ Dashboard.propTypes = {
     waitingTrailingStop: PropTypes.object.isRequired,
     getWaitingTrailingStops: PropTypes.func.isRequired,
     position: PropTypes.object.isRequired,
-    getPositions: PropTypes.func.isRequired
+    getPositions: PropTypes.func.isRequired,
+    errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
     order: state.order,
     stop: state.stop,
     position: state.position,
-    waitingTrailingStop: state.waitingTrailingStop
+    waitingTrailingStop: state.waitingTrailingStop,
+    errors: state.errors
 });
 
 export default connect(mapStateToProps, {

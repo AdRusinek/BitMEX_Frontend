@@ -15,6 +15,8 @@ input:-webkit-autofill:active {
     -webkit-transition-delay: 9999s;
 }
 .invalid-input {
+    margin-right: 15%;
+    margin-left: 15%;
     border: 1px red solid;
     padding: 12px;
     background: rgba(0, 0, 0, 0.73);
@@ -24,6 +26,9 @@ input:-webkit-autofill:active {
 }
 
 .invalid-input-add-account {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
     border: 1px red solid;
     padding: 3px;
     background: rgba(0, 0, 0, 0.73);

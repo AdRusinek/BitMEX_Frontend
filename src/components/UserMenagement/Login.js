@@ -9,6 +9,7 @@ class Login extends Component {
     constructor() {
         super();
         this.state = {
+            requestFromIp: "",
             username: "",
             password: "",
             code: "",
@@ -135,6 +136,9 @@ class Login extends Component {
                             </div>
                             {errors.code && (
                                 <div className="invalid-input">{errors.code}</div>
+                            )}
+                            {errors.requestFromIp&& (
+                                <div className="invalid-input">{errors.requestFromIp}</div>
                             )}
                             <div className="btn-group">
                                 <button
