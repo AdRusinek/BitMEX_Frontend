@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {css} from "../UserDashboard.css"
 
-class WaitingTrailingStopHeadTable extends Component {
+class TrailingStopHeadTable extends Component {
   render() {
     return (
       <div className="trailing-table-header">
@@ -23,4 +23,4 @@ class WaitingTrailingStopHeadTable extends Component {
     );
   }
 }
-export default WaitingTrailingStopHeadTable;
+export default TrailingStopHeadTable;

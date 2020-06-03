@@ -10,6 +10,7 @@ class Register extends Component {
         super();
 
         this.state = {
+            requestFromIp: "",
             username: "",
             fullName: "",
             password: "",
@@ -71,8 +72,12 @@ class Register extends Component {
             return re.test(String(email).toLowerCase());
         }
 
+        function disableButton() {
+            disableSubmit = true;
+        }
+
         return (
-            <div className="login-register">
+            <div className="register">
                 <div className="logo">
                     <i className="fa fa-user-circle-o"/>
                 </div>
@@ -152,6 +157,9 @@ class Register extends Component {
                             <div className="invalid-input-register">
                                 {errors.confirmPassword}
                             </div>
+                        )}
+                        {errors.requestFromIp&& (
+                            <div className="invalid-input">{errors.requestFromIp}</div>
                         )}
                         <div className="btn-group">
                             <button

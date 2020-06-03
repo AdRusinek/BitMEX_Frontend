@@ -4,9 +4,9 @@ import {css} from "../UserDashboard.css"
 import {connect} from "react-redux";
 import {closeModalClearState} from "../../actions/commonActions";
 import PropTypes from "prop-types";
-import AddTrailing from "./AddWaitingTrailingStop";
+import AddStopMarket from "./AddStopMarket";
 
-export class AddWaitingTrailingStopButton extends Component {
+export class AddStopMarketButton extends Component {
     constructor() {
         super();
         this.state = {
@@ -35,7 +35,7 @@ export class AddWaitingTrailingStopButton extends Component {
                         className="trailing-modal-button"
                         onClick={this.handleOpenModal}
                     >
-                        <i className="fa fa-line-chart"/> Add Trailing Stop
+                        <i className="fa fa-line-chart"/> Add Stop Market
                     </button>
                     <Modal isOpen={this.state.showModal} onRequestClose={this.handleCloseModal}
                            className="Modal" overlayClassName="Overlay" ariaHideApp={false}>
@@ -46,7 +46,7 @@ export class AddWaitingTrailingStopButton extends Component {
                         >
                             <i className="fa fa-window-close"/>
                         </button>
-                        <AddTrailing paramsAccountId={this.props.accountId} closeModal={this.handleCloseModal}/>
+                        <AddStopMarket paramsAccountId={this.props.accountId} closeModal={this.handleCloseModal}/>
                     </Modal>
                 </React.Fragment>
             </div>
@@ -54,8 +54,8 @@ export class AddWaitingTrailingStopButton extends Component {
     }
 }
 
-AddWaitingTrailingStopButton.propTypes = {
+AddStopMarketButton.propTypes = {
     closeModalClearState: PropTypes.func.isRequired
 };
 
-export default connect(null, {closeModalClearState})(AddWaitingTrailingStopButton);
+export default connect(null, {closeModalClearState})(AddStopMarketButton);

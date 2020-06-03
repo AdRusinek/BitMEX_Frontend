@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./store";
-import Trailing from "./components/WaitingTrailingStop/AddWaitingTrailingStop";
+import Trailing from "./components/TrailingStop/AddTrailingStop";
 import Register from "./components/UserMenagement/Register";
 import Login from "./components/UserMenagement/Login";
 import jwt_decode from "jwt-decode";

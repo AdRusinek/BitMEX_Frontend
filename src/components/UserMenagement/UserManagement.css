@@ -7,10 +7,21 @@ body {
     color: white;
 }
 
-.login-register {
+.login {
     background: rgba(0, 0, 0, 0.58);
     border-radius: 20px;
     height: 400px;
+    width: 520px;
+    position: relative;
+    top: 50%;
+    transform: translateY(15%);
+    margin: 0 auto;
+}
+
+.register {
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 20px;
+    height: 480px;
     width: 520px;
     position: relative;
     top: 50%;

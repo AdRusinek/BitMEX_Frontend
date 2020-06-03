@@ -6,7 +6,7 @@ import classnames from "classnames";
 import {css} from "../Account/AccountStyles.css";
 
 
-export class AddWaitingTrailingStop extends Component {
+export class AddTrailingStop extends Component {
 
     state = {
         trailingStopAmount: "",
@@ -158,8 +158,8 @@ export class AddWaitingTrailingStop extends Component {
         );
     }
 }
-AddWaitingTrailingStop.propTypes = {
-    createTrailing: PropTypes.func.isRequired,
+AddTrailingStop.propTypes = {
+    postTrailingStop: PropTypes.func.isRequired,
     closeModal: PropTypes.func.isRequired,
     errors: PropTypes.object.isRequired
 };
@@ -168,4 +168,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, {postTrailingStop})(AddWaitingTrailingStop);
+export default connect(mapStateToProps, {postTrailingStop})(AddTrailingStop);

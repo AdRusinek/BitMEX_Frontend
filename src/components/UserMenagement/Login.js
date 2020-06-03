@@ -76,7 +76,7 @@ class Login extends Component {
         };
         return (
             <div>
-                <div className="login-register">
+                <div className="login">
                     <div className="logo">
                         <i className="fa fa-home"/>
                     </div>

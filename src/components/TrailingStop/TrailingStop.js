@@ -4,7 +4,7 @@ import {deleteTrailingStop} from "../../actions/trailingActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-class WaitingTrailingStop extends Component {
+class TrailingStop extends Component {
 
     onDeleteClick(trailing_id, account_id) {
         this.props.deleteTrailingStop(trailing_id, account_id);
@@ -37,8 +37,8 @@ class WaitingTrailingStop extends Component {
     }
 }
 
-WaitingTrailingStop.propTypes = {
+TrailingStop.propTypes = {
     deleteTrailingStop: PropTypes.func.isRequired
 };
 
-export default connect(null, {deleteTrailingStop})( WaitingTrailingStop);
+export default connect(null, {deleteTrailingStop})( TrailingStop);
