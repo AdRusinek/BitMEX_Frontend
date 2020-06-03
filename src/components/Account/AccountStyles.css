@@ -1,20 +1,18 @@
 .account-delete {
-    font-size: 13px;
-    text-align: center;
-    margin-left: 70%;
-    margin-right: 28%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 4px 10px 6px;
+    background: rgba(0, 0, 0, 0.67);
+    border: 1px solid red;
+    font-size: 16px;
     color: red;
 }
 
-.account-delete:hover {
-    background: #949494;
-}
-
 .alert-delete {
-    font-size: 13px;
-    text-align: center;
-    margin-left: 60%;
-    margin-right: 38%;
+    padding: 5px 10px 5px;
+    background: rgba(0, 0, 0, 0.67);
+    border: 1px solid red;
+    font-size: 16px;
     color: red;
 }
 
@@ -25,7 +23,7 @@
     color: red;
 }
 
-.alert-delete:hover {
+.fa-trash-o:hover {
     background: #949494;
 }
 
@@ -54,6 +52,20 @@
 
 .accounts {
     text-decoration: none;
+}
+
+.account {
+    padding: 8px 100px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px groove rgb(255, 255, 255);
+}
+
+.account:hover {
+    background: rgba(62, 62, 62, 0.42);
 }
 
 #account-link {
@@ -95,13 +107,23 @@
 }
 
 .alert-display {
-    padding: 4px;
+    padding: 5px 50px;
     margin-top: 10px;
-    margin-left: 40%;
-    margin-right: 40%;
     text-align: center;
     border: 1px groove rgb(255, 255, 255);
-    color: b;
+}
+
+.alerts-display {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.alerts-display li {
+    margin-left: -11px;
+    display: inline-block;
+    margin-bottom: 1%;
 }
 
 .add-alert-content {

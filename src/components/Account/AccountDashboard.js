@@ -56,41 +56,46 @@ class AccountDashboard extends Component {
         return (
             <div className="account-dashboard container">
                 <div className="col-sm-12">
+
                     <div className="accounts">
                         {manageAddAccountButton()}
                         {accounts.map(account => (
-                            <div>
-                                <div className="account-display">
+                            <ul className="alerts-display">
+                                <li>
                                     <Link id="account-link" to={`/dashboard/${account.id}`}>
                                         <Account
                                             key={account.id}
                                             account={account}
                                         />
                                     </Link>
-                                </div>
-                                <div className="account-delete">
+                                </li>
+                                <li className="account-delete">
                                     <i className="fa fa-trash-o" aria-hidden="true"
                                        onClick={this.onDeleteAccountClick.bind(this, account.id)}
                                     />
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         ))}
                     </div>
+
                     <div className="alerts">
                         {manageAddAlertButton()}
                         {customAlerts.map(customAlert => (
-                            <div>
+                            <ul className="alerts-display">
+                                <li>
                                 <Alert
                                     key={customAlert.id}
                                     customAlert={customAlert}
                                 />
-                                <div className="alert-delete">
+                                </li>
+                                <li className="alert-delete">
                                     <i className="fa fa-trash-o" aria-hidden="true"
                                        onClick={this.onDeleteAlertClick.bind(this, customAlert.id)}/>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         ))}
                     </div>
+
                 </div>
                 <div className="guides">
                     {/*<ShowFilesButton/>*/}

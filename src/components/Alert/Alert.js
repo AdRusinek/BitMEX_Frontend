@@ -5,7 +5,7 @@ class Alert extends Component {
         const {customAlert} = this.props;
         return (
             <div className="alert-display">
-                <text>Alert price: {customAlert.alertTriggeringPrice}</text>
+                Alert price: {customAlert.alertTriggeringPrice}
             </div>
         );
     }
